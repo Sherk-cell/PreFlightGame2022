@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Color Module Level 4
+Editor's Draft, 11 July 2016
+https://drafts.csswg.org/css-color/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <!-- CSS functions -->
+  <function id="gray" declared-in="4.0" url="https://drafts.csswg.org/css-color/#grays">
+    <description><![CDATA[
+      <p>The <b>gray()</b> functional notation simplifies specifying this common set of colors, so that only a single numerical
+      parameter is required, and so that gray(50%) is a visual mid-gray (perceptually equidistant between black and white).</p>
+      ]]></description>
+    <group>
+      <group type="or" name="lightness">
+        <integer min-value="0" max-value="255"/>
+        <percentage min-value="0" max-value="100"/>
+      </group>
+      <group min="0" max="1">
+        <text value=","/>
+        <group type="or" name="alpha-value">
+          <number min-value="0" max-value="1"/>
+          <percentage min-value="0" max-value="100"/>
+        </group>
+      </group>
+    </group>
+  </function>
+  <function id="hwb" declared-in="4.0" url="https://drafts.csswg.org/css-color/#the-hwb-notation">
+    <description><![CDATA[
+      <p>HWB (short for Hue-Whiteness-Blackness) is another method of specifying colors, similar to HSL, but often even easier for
+      humans to work with. It describes colors with a starting hue, then a degree of whiteness and blackness to mix into that base hue.</p>
+      ]]></description>
+    <group>
+      <integer name="hue" min-value="0" max-value="360"/>
+      <text value=","/>
+      <percentage name="whiteness" min-value="0" max-value="100"/>
+      <text value=","/>
+      <percentage name="blackness" min-value="0" max-value="100"/>
+      <group min="0" max="1">
+        <text value=","/>
+        <group type="or" name="alpha-value">
+          <number min-value="0" max-value="1"/>
+          <percentage min-value="0" max-value="100"/>
+        </group>
+      </group>
+    </group>
+  </function>
+  <function id="color" declared-in="4.0" url="https://drafts.csswg.org/css-color/#modifying-colors">
+    <description><![CDATA[
+      <p>The <b>color()</b> function takes an existing color, and applies zero or more color adjusters to it,
+      which specify how to manipulate the color in some way.</p>
+      ]]></description>
+    <group>
+      <group type="or">
+        <inline id="color" name="color"/>
+        <number name="hue" min-value="0" max-value="360"/>
+      </group>
+      <group min="0" max="-1">
+        <inline id="color-adjuster" name="color-adjuster"/>
+      </group>
+    </group>
+  </function>
+
+  <!-- CSS color adjusters -->
+  <function id="red" declared-in="4.0" url="https://drafts.csswg.org/css-color/#rgba-adjusters">
+    <group type="or">
+      <integer min-value="0" max-value="255"/>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="green" declared-in="4.0" url="https://drafts.csswg.org/css-color/#rgba-adjusters">
+    <group type="or">
+      <integer min-value="0" max-value="255"/>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="blue" declared-in="4.0" url="https://drafts.csswg.org/css-color/#rgba-adjusters">
+    <group type="or">
+      <integer min-value="0" max-value="255"/>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="a" declared-in="4.0" url="https://drafts.csswg.org/css-color/#rgba-adjusters">
+    <group type="or">
+      <number min-value="0" max-value="1"/>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="alpha" declared-in="4.0" url="https://drafts.csswg.org/css-color/#rgba-adjusters">
+    <group type="or">
+      <number min-value="0" max-value="1"/>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="hue" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <integer min-value="0" max-value="360"/>
+    </group>
+  </function>
+  <function id="h" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <integer min-value="0" max-value="360"/>
+    </group>
+  </function>
+  <function id="saturation" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="s" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="lightness" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="l" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="whiteness" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="w" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="blackness" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="b" declared-in="4.0" url="https://drafts.csswg.org/css-color/#hsl-hwb-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="tint" declared-in="4.0" url="https://drafts.csswg.org/css-color/#tint-shade-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="shade" declared-in="4.0" url="https://drafts.csswg.org/css-color/#tint-shade-adjusters">
+    <group>
+      <percentage min-value="0" max-value="100"/>
+    </group>
+  </function>
+  <function id="blend" declared-in="4.0" url="https://drafts.csswg.org/css-color/#blend-adjuster">
+    <group>
+      <inline id="color" name="color"/>
+      <percentage min-value="0" max-value="100"/>
+      <group type="or" min="0" max="1">
+        <name value="rgb"/>
+        <name value="hsl"/>
+        <name value="hwb"/>
+      </group>
+    </group>
+  </function>
+  <function id="contrast" declared-in="4.0" url="https://drafts.csswg.org/css-color/#contrast-adjuster">
+    <group>
+      <group min="0" max="1">
+        <percentage min-value="0" max-value="100"/>
+      </group>
+    </group>
+  </function>
+
+  <!--CSS named values-->
+  <named-value id="color" declared-in="4.0">
+    <group type="or">
+      <color/>
+      <name value="transparent"/>
+      <name value="currentColor"/>
+      <inline id="named-color"/>
+      <inline id="system-color"/>
+      <inline id="mozilla-color"/>
+      <inline id="webkit-color"/>
+      <invoke id="rgb"/>
+      <invoke id="rgba"/>
+      <invoke id="hsl"/>
+      <invoke id="hsla"/>
+      <invoke id="gray"/>
+      <invoke id="hwb"/>
+      <invoke id="color"/>
+    </group>
+  </named-value>
+  <named-value id="color-adjuster" declared-in="4.0">
+    <group type="or">
+      <invoke id="red"/>
+      <invoke id="green"/>
+      <invoke id="blue"/>
+      <invoke id="a"/>
+      <invoke id="alpha"/>
+      <invoke id="hue"/>
+      <invoke id="h"/>
+      <invoke id="saturation"/>
+      <invoke id="s"/>
+      <invoke id="lightness"/>
+      <invoke id="l"/>
+      <invoke id="whiteness"/>
+      <invoke id="w"/>
+      <invoke id="blackness"/>
+      <invoke id="b"/>
+      <invoke id="tint"/>
+      <invoke id="shade"/>
+      <invoke id="blend"/>
+      <invoke id="contrast"/>
+    </group>
+  </named-value>
+
+  <property id="color-adjust" declared-in="4.0" url="http://www.w3.org/TR/css-color-4/#propdef-color-adjust" applies="all elements"
+            initial="economy" inherited="yes" percentage="N/A" media="visual">
+    <description>
+      <![CDATA[<p>The color-adjust property provides a hint to the user-agent about how it should treat color and style choices that might be expensive or generally unwise on a given device, such as using light text on a dark background in a printed document.</p>]]></description>
+    <group type="or">
+      <name value="economy"
+            tooltip="The user agent should make adjustments to the page’s styling as it deems necessary and prudent for the output device. For example, if the document is being printed, a user agent might ignore any backgrounds and adjust text color to be sufficiently dark, to minimize ink usage."/>
+      <name value="exact"
+            tooltip="This value indicates that the page is using color and styling on the specified element in a way which is important and significant, and which should not be tweaked or changed except at the user’s request. For example, a mapping website offering printed directions might &quot;zebra-stripe&quot; the steps in the directions, alternating between white and light gray backgrounds. Losing this zebra-striping and having a pure-white background would make the directions harder to read with a quick glance when distracted in a car."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

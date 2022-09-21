@@ -1,0 +1,6 @@
+W3C CSS specifications: http://www.w3.org/TR/tr-groups-all#tr_Cascading_Style_Sheets__CSS__Working_Group
+Microsoft All CSS Elements Index: http://msdn.microsoft.com/en-us/library/ie/hh869403(v=vs.85).aspx
+Mozilla Extensions: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Mozilla_Extensions
+Webkit Extensions: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Webkit_Extensions
+Webkit CSS properties: http://css-infos.net/properties/webkit
+Safari extensions: https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html

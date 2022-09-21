@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Animations Level 1
+W3C Working Draft, 30 November 2017
+https://www.w3.org/TR/2017/WD-css-animations-1-20171130/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <named-value id="keyframes-name" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#typedef-keyframes-name">
+    <group type="or">
+      <inline id="custom-ident"/>
+      <string/>
+    </group>
+  </named-value>
+
+  <named-value id="single-animation-iteration-count" declared-in="3.0"
+               url="https://www.w3.org/TR/css-animations-1/#typedef-single-animation-iteration-count">
+    <group type="or">
+      <name value="infinite"/>
+      <number/>
+    </group>
+  </named-value>
+
+  <named-value id="single-animation-direction" declared-in="3.0"
+               url="https://www.w3.org/TR/css-animations-1/#typedef-single-animation-direction">
+    <group type="or">
+      <name value="normal"/>
+      <name value="reverse"/>
+      <name value="alternate"/>
+      <name value="alternate-reverse"/>
+    </group>
+  </named-value>
+
+  <named-value id="single-animation-play-state" declared-in="3.0"
+               url="https://www.w3.org/TR/css-animations-1/#typedef-single-animation-play-state">
+    <group type="or">
+      <name value="running"/>
+      <name value="paused"/>
+    </group>
+  </named-value>
+
+  <named-value id="single-animation-fill-mode" declared-in="3.0"
+               url="https://www.w3.org/TR/css-animations-1/#typedef-single-animation-fill-mode">
+    <group type="or">
+      <name value="none"/>
+      <name value="forwards"/>
+      <name value="backwards"/>
+      <name value="both"/>
+    </group>
+  </named-value>
+
+  <named-value id="single-animation" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#typedef-single-animation">
+    <group type="any">
+      <time/>
+      <inline id="single-timing-function" inline="yes"/>
+      <time/>
+      <inline id="single-animation-iteration-count"/>
+      <inline id="single-animation-direction"/>
+      <inline id="single-animation-fill-mode"/>
+      <inline id="single-animation-play-state"/>
+      <group type="or">
+        <name value="none"/>
+        <inline id="keyframes-name"/>
+      </group>
+    </group>
+  </named-value>
+
+  <property id="animation" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation"
+            applies="all elements, ::before and ::after pseudo-elements" initial="see individual properties" inherited="no" percentage="N/A"
+            media="interactive" animatable="no">
+    <description><![CDATA[
+      <p>The 'animation' shorthand property is a comma-separated list of animation definitions. Each item in the list gives one item of the
+      value for all of the subproperties of the shorthand, which are known as the animation properties.  </p>
+      ]]></description>
+    <group type="or">
+      <inline id="single-animation" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation" prefix="o" browsers="O12"/>
+
+  <property id="animation-delay" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-delay"
+            applies="all elements, ::before and ::after pseudo-elements" initial="0s" inherited="no" percentage="N/A" media="interactive"
+            animatable="no">
+    <description><![CDATA[
+      <p>The 'animation-delay' property defines when the animation will start. It allows an animation to begin execution some time after it is
+       applied, or to appear to have begun execution some time before it is applied.<br>
+       The <time> defines how long of a delay there is between the start of the animation (when the animation is applied to the element via
+       these properties) and when it begins executing. A delay of 0s (the initial value) means that the animation will execute as soon as
+       it is applied.<br>
+       A negative delay is valid. Similar to a delay of 0s, it means that the animation executes immediately, but is automatically progressed
+       by the absolute value of the delay, as if the animation had started the specified time in the past, and so it appears to start partway
+       through its active duration. If an animation's keyframes have an implied starting value, the values are taken from the time the
+       animation starts, not some time in the past.</p>
+      ]]></description>
+    <group type="or">
+      <time comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-delay" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-delay" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-delay" prefix="o" browsers="O12"/>
+
+  <property id="animation-direction" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-direction"
+            applies="all elements, ::before and ::after pseudo-elements" initial="normal" inherited="no" percentage="N/A"
+            media="interactive" animatable="no">
+    <description><![CDATA[
+      <p>The 'animation-direction' property defines whether or not the animation should play in reverse on some or all cycles. When an
+      animation is played in reverse the timing functions are also reversed. For example, when played in reverse an 'ease-in' animation would
+      appear to be an 'ease-out' animation.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="single-animation-direction" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-direction" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-direction" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-direction" prefix="o" browsers="O12"/>
+
+  <property id="animation-duration" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-duration"
+            applies="all elements, ::before and ::after pseudo-elements" initial="0s" inherited="no" percentage="N/A" media="interactive"
+            animatable="no">
+    <description><![CDATA[
+      <p> The 'animation-duration' property defines duration of a single animation cycle.<br>
+       The 'time' specifies the length of time that an animation takes to complete one cycle. A negative time is invalid.<br>
+       If the 'time' is 0s, like the initial value, the keyframes of the animation have no effect, but the animation itself still occurs
+       instantaneously. Specifically, start and end events are fired; if 'animation-fill-mode' is set to 'backwards' or 'both', the first frame of
+       the animation, as defined by 'animation-direction', will be displayed during the 'animation-delay'. Then the last frame of the animation,
+       as defined by 'animation-direction', will be displayed if 'animation-fill-mode' is set to 'forwards' or 'both'. If 'animation-fill-mode' is set
+       to 'none' then the animation has no visible effect. </p>
+      ]]></description>
+    <group type="or">
+      <time comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-duration" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-duration" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-duration" prefix="o" browsers="O12"/>
+
+  <property id="animation-fill-mode" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-fill-mode"
+            applies="all elements, ::before and ::after pseudo-elements" initial="none" inherited="no" percentage="N/A" media="interactive"
+            animatable="no">
+    <description><![CDATA[
+      <p>The 'animation-fill-mode' property defines what values are applied by the animation outside the time it is executing. By default, an
+       animation will not affect property values between the time it is applied (the 'animation-name' property is set on an element) and the
+       time it begins execution (which is determined by the 'animation-delay' property). Also, by default an animation does not affect property
+       values after the animation ends (determined by the 'animation-duration' and 'animation-iteration-count' properties). The 'animation-fill-mode'
+       property can override this behavior. Dynamic updates to the property will be reflected by property values as needed, whether during
+       the animation delay or after the animation ends. </p>
+      ]]></description>
+    <group type="or">
+      <inline id="single-animation-fill-mode" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-fill-mode" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-fill-mode" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-fill-mode" prefix="o" browsers="O12"/>
+
+  <property id="animation-iteration-count" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-iteration-count"
+            applies="all elements, ::before and ::after pseudo-elements" initial="1" inherited="no" percentage="N/A" media="interactive"
+            animatable="no">
+    <description>
+      <![CDATA[<p>The 'animation-iteration-count' property specifies the number of times an animation cycle is played. The initial value is 1,
+       meaning the animation will play from beginning to end once. This property is often used in conjunction with an 'animation-direction'
+       value of 'alternate', which will cause the animation to play in reverse on alternate cycles.</p>
+    ]]></description>
+    <group type="or">
+      <inline id="single-animation-iteration-count" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-iteration-count" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-iteration-count" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-iteration-count" prefix="o" browsers="O12"/>
+
+  <property id="animation-name" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-name"
+            applies="all elements, ::before and ::after pseudo-elements" initial="none" inherited="yes" percentage="N/A" media="interactive"
+            animatable="no">
+    <description>
+      <![CDATA[<p>The 'animation-name' property defines a list of animations that apply. Each name is used to select the keyframe at-rule that
+       provides the property values for the animation. If the name does not match any keyframe at-rule, there are no properties to be animated
+       and the animation will not execute. Furthermore, if the animation name is none then there will be no animation. This can be used to
+       override any animations coming from the cascade. If multiple animations are attempting to modify the same property, then the animation
+       closest to the end of the list of names wins.
+      </p>]]></description>
+    <group type="or">
+      <group type="or" comma-separated="yes">
+        <name value="none"/>
+        <inline id="keyframes-name"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-name" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-name" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-name" prefix="o" browsers="O12"/>
+
+  <property id="animation-play-state" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-play-state"
+            applies="all elements, ::before and ::after pseudo-elements" initial="running" inherited="no" percentage="N/A"
+            media="interactive" animatable="no">
+    <description><![CDATA[
+      <p>The 'animation-play-state' property defines whether the animation is running or paused.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="single-animation-play-state" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-play-state" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-play-state" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-play-state" prefix="o" browsers="O12"/>
+
+  <property id="animation-timing-function" declared-in="3.0" url="https://www.w3.org/TR/css-animations-1/#propdef-animation-timing-function"
+            applies="all elements, ::before and ::after pseudo-elements" initial="ease" inherited="no" percentage="N/A" media="interactive"
+            animatable="no">
+    <description><![CDATA[
+        <p>The animation-timing-function property describes how the animation will progress between each pair of keyframes.</p>
+        ]]></description>
+    <group type="or">
+      <inline id="single-timing-function" inline="yes" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="animation-timing-function" prefix="webkit" browsers="C1.0,S4.0"/>
+  <prefixed-property id="animation-timing-function" prefix="moz" browsers="FF5.0"/>
+  <prefixed-property id="animation-timing-function" prefix="o" browsers="O12"/>
+</definitions>

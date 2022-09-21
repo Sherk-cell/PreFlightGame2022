@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <pseudo-class id="first-child" declared-in="2.0" url="http://www.w3.org/TR/CSS2/selector.html#first-child"
+                browsers="C4.0,FF3.0,IE7,O9.5,S3.0"
+                tooltip="Represents an element that is the first child element of some other element."/>
+  <pseudo-element id="first-letter" declared-in="2.0" url="http://www.w3.org/TR/CSS21/selector.html#first-letter"
+                  browsers="C1.0,FF1.0,IE5.5,O3.5,S1.0"
+                  tooltip="The :first-letter pseudo-element selects the first letter of the first line of a block.">
+    <description><![CDATA[
+      The <b>:first-letter</b> pseudo-element must select the first letter of the first line of a block,
+      if it is not preceded by any other content (such as images or inline tables) on its line.
+      ]]></description>
+  </pseudo-element>
+  <pseudo-element id="first-line" declared-in="2.0" url="http://www.w3.org/TR/CSS21/selector.html#first-line-pseudo"
+                  browsers="C1.0,FF1.0,IE5.5,O3.5,S1.0"
+                  tooltip="The :first-line pseudo-element applies special styles to the contents of the first formatted line of a paragraph.">
+    <description><![CDATA[
+      <p>The <b>:first-line</b> pseudo-element applies special styles to the contents of the first formatted line of a paragraph.</p>
+      ]]></description>
+  </pseudo-element>
+  <pseudo-element id="first-letter" declared-in="3.0"
+                  browsers="C1.0,FF1.0,IE9,O7.0,S1.0" url="http://dev.w3.org/csswg/selectors3/#first-letter"
+                  tooltip="The ::first-letter pseudo-element selects the first letter of the first line of a block.">
+    <description><![CDATA[
+      The <b>::first-letter</b> pseudo-element must select the first letter of the first line of a block,
+      if it is not preceded by any other content (such as images or inline tables) on its line.
+      ]]></description>
+  </pseudo-element>
+  <pseudo-element id="first-line" declared-in="3.0"
+                  browsers="C1.0,FF1.0,IE9,O7.0,S1.0" url="http://dev.w3.org/csswg/selectors3/#first-line"
+                  tooltip="The :first-line pseudo-element applies special styles to the contents of the first formatted line of a paragraph.">
+    <description><![CDATA[
+      <p>The <b>::first-line</b> pseudo-element applies special styles to the contents of the first formatted line of a paragraph.</p>
+      ]]></description>
+  </pseudo-element>
+  <pseudo-class id="target" declared-in="3.0" url="http://www.w3.org/TR/css3-selectors/#target-pseudo"
+                browsers="C1.0,FF1.0,IE9,O9.5,S1.3" tooltip="Represents a target element.">
+    <description><![CDATA[
+      The <b>:target</b> pseudo-class selects the target element of the referring URI.
+      A fragment identifier is used to identify a location within a document, and is formed using a number sign followed by an anchor identifier—for example, http://www.example.com/mypage.html#section_3.
+      ]]></description>
+  </pseudo-class>
+
+  <pseudo-element id="before" declared-in="3.0" browsers="C4.0,FF1.5,IE9,O7.0,S4.0"
+                  url="http://dev.w3.org/csswg/selectors3/#gen-content"
+                  tooltip="The ::before pseudo-element specifies the location of content before an element in the document tree."/>
+  <pseudo-element id="after" declared-in="3.0"
+                  tooltip="The ::after pseudo-element specifies the location of content after an element in the document tree."
+                  url="http://dev.w3.org/csswg/selectors3/#gen-content"
+                  browsers="C4.0,FF1.5,IE9,O7.0,S4.0"/>
+  <pseudo-element id="before" declared-in="2.0" url="http://www.w3.org/TR/CSS21/selector.html#before-and-after"
+                  tooltip="The :before pseudo-element specifies the location of content before an element in the document tree."
+                  browsers="C1.0,FF1.0,IE8,O4.0,S4.0"/>
+  <pseudo-element id="after" declared-in="2.0" url="http://www.w3.org/TR/CSS21/selector.html#before-and-after"
+                  browsers="C1.0,FF1.0,IE8,O4.0,S4.0"
+                  tooltip="The :after pseudo-element specifies the location of content after an element in the document tree."/>
+  <pseudo-element id="content" declared-in="3.0" url="http://www.w3.org/TR/css-scoping-1/#selectordef-content"
+                  tooltip="The ::content pseudo-element matches the distribution list itself, on elements that have one."/>
+  <pseudo-element id="-moz-focus-inner" declared-in="0"/>
+</definitions>

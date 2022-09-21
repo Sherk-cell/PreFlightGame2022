@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Motion Path Module Level 1
+W3C Working Draft, 18 December 2018
+https://www.w3.org/TR/2018/WD-motion-1-20181218/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="offset" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset" applies="transformable elements"
+            initial="see individual properties" inherited="no" percentage="see individual properties" media="visual" animatable="yes">
+    <description><![CDATA[<p>This is a shorthand property for setting
+ <see cref="P:offset-position" />,
+ <see cref="P:offset-path" />,
+ <see cref="P:offset-distance" />,
+ <see cref="P:offset-rotate" /> and
+ <see cref="P:offset-anchor" />. Omitted values are set to their initial values.</p>]]></description>
+    <group type="or">
+      <group>
+        <group>
+          <property id="offset-position" min="0"/>
+          <group min="0">
+            <property id="offset-path"/>
+            <group type="any" min="0">
+              <property id="offset-distance"/>
+              <property id="offset-rotate"/>
+            </group>
+          </group>
+        </group>
+        <group min="0">
+          <text value="/"/>
+          <property id="offset-anchor"/>
+        </group>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="offset-anchor" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset-anchor" applies="transformable elements"
+            initial="auto" inherited="no" percentage="Relative to the width and the height of a box" media="visual" animatable="yes">
+    <description>
+      <![CDATA[<p>Defines an anchor point of the box positioned along the offset path. The <strong>anchor point</strong> specifies the point of the box which is to be considered as the point that is moved along the <span id="ref-for-offset-path②⑥">offset path</span>.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Computes to the value from offset-position, provided offset-path is none and offset-position is not auto. Otherwise, computes to the value from transform-origin. When auto is given to offset-anchor, and offset-path is none, offset-position behaves similar to background-position."/>
+      <property id="background-position" name="position" tooltip="&lt;percentage&gt; A percentage for the horizontal offset is relative to width of content area. A percentage for the vertical offset is relative to the height of the content area. For example, with a value pair of '100%, 0%', an anchor point is on the upper right corner of the box. &lt;length&gt; A length value gives a length offset from the upper left corner of the box’s content area."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="offset-distance" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset-distance"
+            applies="transformable elements" initial="0" inherited="no" percentage="refer to the total path length" media="visual"
+            animatable="yes">
+    <description>
+      <![CDATA[<p>Specifies the position of the box as a distance along the offset path.</p>]]></description>
+    <group type="or">
+      <inline id="length-percentage" tooltip="Specifies the distance from the initial position of the offset path to the position of the box’s anchor point. Percentages are relative to the length of the offset path-- that is, the distance between the initial position and the end position of the offset path."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="offset-path" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset-path" applies="transformable elements"
+            initial="none" inherited="no" percentage="n/a" media="visual" animatable="yes">
+    <group type="or">
+      <name value="none" tooltip="No offset path gets created. When offset-path is none, offset-distance and offset-rotate have no effect."/>
+      <invoke id="ray"/>
+      <invoke id="path"/>
+      <invoke id="url" tooltip="References an SVG shape element and uses its geometry as offset path. See SVG 1.1 for more information about the initial position and initial direction [SVG11]."/>
+      <group type="any">
+        <inline id="basic-shape"/>
+        <inline id="geometry-box"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="offset-position" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset-position"
+            applies="transformable elements" initial="auto" inherited="no" percentage="Refer to the size of containing block" media="visual"
+            animatable="yes">
+    <description><![CDATA[<p>Specifies the initial position of the offset path. If
+ <see cref="P:position" /> is specified with static, offset-position would be ignored.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Indicates the initial position is the position of the box specified with position property. Note: When position is static and offset-position is auto (and not ignored due to offset-path), we have positioning relative to normal flow."/>
+      <property id="background-position" name="position" tooltip="Specifies the initial position, with the the containing block as the positioning area and a dimensionless point (zero-sized box) as the object area. Note: This is similar to absolute positioning, except that offset-position does not prevent boxes from impacting the layout of later siblings."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="offset-rotate" declared-in="0" url="https://www.w3.org/TR/motion-1/#propdef-offset-rotate" applies="transformable elements"
+            initial="auto" inherited="no" percentage="n/a" media="visual" animatable="yes">
+    <description><![CDATA[<p>Defines the orientation of the box while positioning along the offset path.</p>]]></description>
+    <group type="or">
+      <group type="any">
+        <group type="or">
+          <name value="auto" tooltip="Indicates that the object is rotated (over time if offset-distance is animated) by the angle of the direction (i.e., directional tangent vector) of the offset path, relative to the positive x-axis. If specified in combination with &lt;angle&gt;, the computed value of &lt;angle&gt; is added to the computed value of auto. Note: For ray paths, the rotation implied by auto is 90 degrees less than the ray’s bearing &lt;angle&gt;."/>
+          <name value="reverse" tooltip="Indicates that the object is rotated (over time if offset-distance is animated) by the angle of the direction (i.e., directional tangent vector) of the offset path, relative to the positive x-axis, plus 180 degrees. If specified in combination with &lt;angle&gt;, the computed value of &lt;angle&gt; is added to the computed value of reverse. Note: This is the same as specifying auto 180deg."/>
+        </group>
+        <angle
+            tooltip="Indicates that the box has a constant clockwise rotation transformation applied to it by the specified rotation angle. See definitions of auto or reverse if specified in combination with either one of the keywords."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <function id="ray" declared-in="4.0">
+    <group type="and">
+      <angle/>
+      <inline id="ray-size"/>
+      <name value="contain" min="0"/>
+    </group>
+  </function>
+  
+  <named-value id="ray-size" declared-in="4.0">
+    <group type="or">
+      <name value="closest-side"/>
+      <name value="closest-corner"/>
+      <name value="farthest-side"/>
+      <name value="farthest-corner"/>
+      <name value="sides"/>
+    </group>
+  </named-value>
+
+  <function id="path" declared-in="4.0">
+    <group>
+      <string/>
+    </group>
+  </function>
+
+</definitions>

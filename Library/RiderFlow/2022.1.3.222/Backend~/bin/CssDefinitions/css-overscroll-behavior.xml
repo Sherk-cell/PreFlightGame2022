@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Overscroll Behavior Module Level 1
+Editor’s Draft, 23 October 2018
+https://drafts.csswg.org/css-overscroll-behavior-1/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="overscroll-behavior" declared-in="0" url="https://drafts.csswg.org/css-overscroll-behavior/#propdef-overscroll-behavior" applies="scroll container elements" initial="auto auto" inherited="no" percentage="n/a" media="visual" animatable="no">
+    <description><![CDATA[<p>The two values specify the behavior in the horizontal and vertical direction, respectively. If only one value is specified, the second value defaults to the same value.</p>]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="contain" tooltip="This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as overscroll behavior."/>
+        <name value="none" tooltip="This value implies the same behavior as contain and in addition this element must also not perform local boundary default actions such as showing any overscroll affordances."/>
+        <name value="auto" tooltip="This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="overscroll-behavior-x" declared-in="0" url="https://drafts.csswg.org/css-overscroll-behavior/#propdef-overscroll-behavior-x" applies="scroll container elements" initial="auto" inherited="no" percentage="N/A" media="visual" animatable="no">
+    <description><![CDATA[<p>The overscroll-behavior-x property specifies the behavior of the
+ <see cref="P:overscroll-behavior" /> in the horizontal direction and the
+ <see cref="P:overscroll-behavior-y" /> property specifies the handling of the <span class="property" id="ref-for-propdef-overscroll-behavior">overscroll-behavior</span> in the vertical direction. When scrolling is performed along both the horizontal and vertical axes at the same time, the <span class="property" id="ref-for-propdef-overscroll-behavior④">overscroll-behavior</span> of each respective axis should be considered independently.</p>]]></description>
+    <group type="or">
+      <name value="contain" tooltip="This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as overscroll behavior."/>
+      <name value="none" tooltip="This value implies the same behavior as contain and in addition this element must also not perform local boundary default actions such as showing any overscroll affordances."/>
+      <name value="auto" tooltip="This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="overscroll-behavior-y" declared-in="0" url="https://drafts.csswg.org/css-overscroll-behavior/#propdef-overscroll-behavior-y" applies="scroll container elements" initial="auto" inherited="no" percentage="N/A" media="visual" animatable="no">
+    <description><![CDATA[<p>The overscroll-behavior-x property specifies the behavior of the
+ <see cref="P:overscroll-behavior" /> in the horizontal direction and the
+ <see cref="P:overscroll-behavior-y" /> property specifies the handling of the <span class="property" id="ref-for-propdef-overscroll-behavior">overscroll-behavior</span> in the vertical direction. When scrolling is performed along both the horizontal and vertical axes at the same time, the <span class="property" id="ref-for-propdef-overscroll-behavior④">overscroll-behavior</span> of each respective axis should be considered independently.</p>]]></description>
+    <group type="or">
+      <name value="contain" tooltip="This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as overscroll behavior."/>
+      <name value="none" tooltip="This value implies the same behavior as contain and in addition this element must also not perform local boundary default actions such as showing any overscroll affordances."/>
+      <name value="auto" tooltip="This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+</definitions>

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- See https://www.w3.org/TR/SVG/color.html#ColorProfileAtRule -->
+<!-- See https://www.w3.org/TR/SVG2/propidx.html -->
+
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="name" rules="@color-profile" declared-in="3.0" url="http://www.w3.org/TR/SVG/color.html#ColorProfileNameProperty">
+    <name/>
+  </property>
+
+  <property id="src" rules="@color-profile" declared-in="3.0" url="http://www.w3.org/TR/SVG/color.html#ColorProfileSrcProperty">
+    <group type="or">
+      <name value="sRGB"/>
+      <invoke id="local" name="&lt;local-profile&gt;"/>
+      <invoke id="url" name="&lt;iri&gt;"/>
+      <group>
+        <invoke id="local" name="&lt;local-profile&gt;"/>
+        <invoke id="url" name="&lt;iri&gt;"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="rendering-intent" rules="@color-profile" declared-in="3.0" initial="auto" media="visual"
+            url="http://www.w3.org/TR/SVG/color.html#RenderingIntentProperty">
+    <group type="or">
+      <name value="auto"/>
+      <name value="perceptual"/>
+      <name value="relative-colorimetric"/>
+      <name value="saturation"/>
+      <name value="absolute-colorimetric"/>
+    </group>
+  </property>
+
+
+  <property id="alignment-baseline" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="baseline"/>
+      <name value="before-edge"/>
+      <name value="text-before-edge"/>
+      <name value="middle"/>
+      <name value="central"/>
+      <name value="after-edge"/>
+      <name value="text-after-edge"/>
+      <name value="ideographic"/>
+      <name value="alphabetic"/>
+      <name value="hanging"/>
+      <name value="mathematical"/>
+    </group>
+  </property>
+
+  <property id="baseline-shift" declared-in="2.0">
+    <group type="or">
+      <name value="baseline"/>
+      <name value="sub"/>
+      <name value="super"/>
+      <percentage/>
+      <length/>
+      <number/>
+    </group>
+  </property>
+
+  <property id="clip" declared-in="2.0">
+    <group type="or">
+      <inline id="shape"/>
+      <name value="auto"/>
+    </group>
+  </property>
+
+  <property id="clip-path" declared-in="2.0">
+    <group type="or">
+      <inline id="basic-shape"/>
+      <uri/>
+      <name value="none"/>
+    </group>
+  </property>
+
+  <property id="clip-rule" declared-in="2.0">
+    <group type="or">
+      <name value="nonzero"/>
+      <name value="evenodd"/>
+    </group>
+  </property>
+
+  <!-- <property id="color"> already properly defined elsewhere -->
+
+  <property id="color-interpolation" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="sRGB"/>
+      <name value="linearRGB"/>
+    </group>
+  </property>
+
+  <property id="color-rendering" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="optimizeSpeed"/>
+      <name value="optimizeQuality"/>
+    </group>
+  </property>
+
+  <property id="cursor" declared-in="2.0">
+    <group type="or">
+      <group>
+        <group min="0" max="-1">
+          <invoke id="url"/>
+        </group>
+        <group type="or">
+          <name value="auto"/>
+          <name value="crosshair"/>
+          <name value="default"/>
+          <name value="pointer"/>
+          <name value="move"/>
+          <name value="e-resize"/>
+          <name value="ne-resize"/>
+          <name value="nw-resize"/>
+          <name value="n-resize"/>
+          <name value="se-resize"/>
+          <name value="sw-resize"/>
+          <name value="s-resize"/>
+          <name value="w-resize"/>
+          <name value="text"/>
+          <name value="wait"/>
+          <name value="help"/>
+        </group>
+      </group>
+    </group>
+  </property>
+
+  <property id="direction" declared-in="2.0">
+    <group type="or">
+      <name value="ltr"/>
+      <name value="rtl"/>
+    </group>
+  </property>
+
+  <property id="display" declared-in="2.0">
+    <group type="or">
+      <name value="inline"/>
+      <name value="block"/>
+      <name value="list-item"/>
+      <name value="run-in"/>
+      <name value="compact"/>
+      <name value="marker"/>
+      <name value="table"/>
+      <name value="inline-table"/>
+      <name value="table-row-group"/>
+      <name value="table-header-group"/>
+      <name value="table-footer-group"/>
+      <name value="table-row"/>
+      <name value="table-column-group"/>
+      <name value="table-column"/>
+      <name value="table-cell"/>
+      <name value="table-caption"/>
+      <name value="none"/>
+    </group>
+  </property>
+
+  <property id="dominant-baseline" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="use-script"/>
+      <name value="no-change"/>
+      <name value="reset-size"/>
+      <name value="ideographic"/>
+      <name value="alphabetic"/>
+      <name value="hanging"/>
+      <name value="mathematical"/>
+      <name value="central"/>
+      <name value="middle"/>
+      <name value="text-after-edge"/>
+      <name value="text-before-edge"/>
+    </group>
+  </property>
+
+  <property id="fill" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <name value="child"/>
+      <invoke id="child"/>
+      <inline id="color"/>
+      <group>
+        <uri/>
+        <group type="or" min="0" max="-1">
+          <name value="none"/>
+          <inline id="color"/>
+        </group>
+      </group>
+      <name value="context-fill"/>
+      <name value="context-stroke"/>
+    </group>
+  </property>
+
+  <function id="child" declared-in="2.0">
+    <integer/>
+  </function>
+
+  <property id="fill-opacity" declared-in="2.0">
+    <group type="or">
+      <number/>
+      <percentage/>
+    </group>
+  </property>
+
+  <property id="fill-rule" declared-in="2.0">
+    <group type="or">
+      <name value="nonzero"/>
+      <name value="evenodd"/>
+    </group>
+  </property>
+
+  <!-- <property id="filter"> already properly defined in css3-filter-effects.xml -->
+  <!-- <property id="flood-color"> already properly defined in css3-filter-effects.xml -->
+  <!-- <property id="flood-opacity"> already properly defined in css3-filter-effects.xml -->
+  <!-- <property id="font"> already properly defined elsewhere -->
+  <!-- <property id="font-family"> already properly defined elsewhere -->
+  <!-- <property id="font-size"> already properly defined elsewhere -->
+  <!-- <property id="font-size-adjust"> already properly defined elsewhere -->
+  <!-- <property id="font-stretch"> already properly defined elsewhere -->
+  <!-- <property id="font-style"> already properly defined elsewhere -->
+  <!-- <property id="font-variant"> already properly defined elsewhere -->
+  <!-- <property id="font-weight"> already properly defined elsewhere -->
+  <!-- <property id="font-weight"> already properly defined elsewhere -->
+
+  <property id="glyph-orientation-vertical" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <angle/>
+      <number/>
+    </group>
+  </property>
+
+  <property id="image-rendering" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="optimizeSpeed"/>
+      <name value="optimizeQuality"/>
+    </group>
+  </property>
+
+  <!-- <property id="letter-spacing"> already properly defined elsewhere -->
+  <!-- <property id="lighting-color"> already properly defined elsewhere -->
+  <!-- <property id="line-height"> already properly defined elsewhere -->
+
+  <property id="marker" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <uri/>
+    </group>
+  </property>
+
+  <property id="marker-end" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <uri/>
+    </group>
+  </property>
+
+  <property id="marker-mid" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <uri/>
+    </group>
+  </property>
+
+  <property id="marker-start" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <uri/>
+    </group>
+  </property>
+
+  <property id="mask" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <uri/>
+    </group>
+  </property>
+
+<!-- Already declared in css3.0.xml
+
+  <property id="opacity" declared-in="2.0">
+    <group type="or">
+      <number/>
+      <percentage/>
+    </group>
+  </property>
+-->
+
+  <property id="overflow" declared-in="2.0">
+    <group type="or">
+      <name value="visible"/>
+      <name value="hidden"/>
+      <name value="scroll"/>
+      <name value="auto"/>
+    </group>
+  </property>
+
+  <property id="paint-order" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <group type="or" max="-1">
+        <name value="fill"/>
+        <name value="stroke"/>
+        <name value="markers"/>
+      </group>
+    </group>
+  </property>
+
+  <property id="pointer-events" declared-in="2.0">
+    <group type="or">
+      <name value="bounding-box"/>
+      <name value="visiblePainted"/>
+      <name value="visibleFill"/>
+      <name value="visibleStroke"/>
+      <name value="visible"/>
+      <name value="painted"/>
+      <name value="fill"/>
+      <name value="stroke"/>
+      <name value="all"/>
+      <name value="none"/>
+    </group>
+  </property>
+
+  <property id="shape-rendering" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="optimizeSpeed"/>
+      <name value="crispEdges"/>
+      <name value="geometricPrecision"/>
+    </group>
+  </property>
+
+  <property id="solid-color" declared-in="2.0">
+    <inline id="color"/>
+  </property>
+
+  <property id="solid-opacity" declared-in="2.0">
+    <group type="or">
+      <number/>
+      <percentage/>
+    </group>
+  </property>
+
+  <property id="stop-color" declared-in="2.0">
+    <inline id="color"/>
+  </property>
+
+  <property id="stop-opacity" declared-in="2.0">
+    <group type="or">
+      <number/>
+      <percentage/>
+    </group>
+  </property>
+
+  <property id="stroke" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <name value="child"/>
+      <invoke id="child"/>
+      <inline id="color"/>
+      <group>
+        <uri/>
+        <group type="or" min="0" max="-1">
+          <name value="none"/>
+          <inline id="color"/>
+        </group>
+      </group>
+      <name value="context-fill"/>
+      <name value="context-stroke"/>
+    </group>
+  </property>
+
+  <property id="stroke-dasharray" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <group comma-separated="yes">
+        <group type="or">
+          <length/>
+          <percentage/>
+          <number/>
+        </group>
+      </group>
+    </group>
+  </property>
+
+  <property id="stroke-dashoffset" declared-in="2.0">
+    <group type="or">
+      <percentage/>
+      <length/>
+      <number/>
+    </group>
+  </property>
+
+  <property id="stroke-linecap" declared-in="2.0">
+    <group type="or">
+      <name value="butt"/>
+      <name value="round"/>
+      <name value="square"/>
+    </group>
+  </property>
+
+  <property id="stroke-linejoin" declared-in="2.0">
+    <group type="or">
+      <name value="miter"/>
+      <name value="miter-clip"/>
+      <name value="round"/>
+      <name value="bevel"/>
+      <name value="arcs"/>
+    </group>
+  </property>
+
+  <property id="stroke-miterlimit" declared-in="2.0">
+    <group type="or">
+      <number/>
+    </group>
+  </property>
+
+  <property id="stroke-opacity" declared-in="2.0">
+    <group type="or">
+      <number/>
+      <percentage/>
+    </group>
+  </property>
+
+  <property id="stroke-width" declared-in="2.0">
+    <group type="or">
+      <percentage/>
+      <length/>
+      <number/>
+    </group>
+  </property>
+
+  <property id="text-anchor" declared-in="2.0">
+    <group type="or">
+      <name value="start"/>
+      <name value="middle"/>
+      <name value="end"/>
+    </group>
+  </property>
+
+  <property id="text-decoration" declared-in="2.0">
+    <group type="or">
+      <name value="none"/>
+      <group type="or" max="-1">
+        <name value="underline"/>
+        <name value="overline"/>
+        <name value="line-through"/>
+        <name value="blink"/>
+      </group>
+    </group>
+  </property>
+
+  <property id="text-rendering" declared-in="2.0">
+    <group type="or">
+      <name value="auto"/>
+      <name value="optimizeSpeed"/>
+      <name value="optimizeLegibility"/>
+      <name value="geometricPrecision"/>
+    </group>
+  </property>
+
+  <property id="unicode-bidi" declared-in="2.0">
+    <group type="or">
+      <name value="normal"/>
+      <name value="embed"/>
+      <name value="bidi-override"/>
+    </group>
+  </property>
+
+  <property id="vector-effect" declared-in="2.0">
+    <group type="or">
+      <name value="non-scaling-stroke"/>
+      <name value="none"/>
+    </group>
+  </property>
+
+  <property id="visibility" declared-in="2.0">
+    <group type="or">
+      <name value="visible"/>
+      <name value="hidden"/>
+      <name value="collapse"/>
+    </group>
+  </property>
+
+  <!--<property id="word-spacing" declared-in="2.0"> already defined elsewhere-->
+  <!--<property id="white-space" declared-in="2.0">  already defined elsewhere-->
+
+  <property id="writing-mode" declared-in="2.0">
+    <group type="or">
+      <name value="lr-tb"/>
+      <name value="rl-tb"/>
+      <name value="tb-rl"/>
+      <name value="lr"/>
+      <name value="rl"/>
+      <name value="tb"/>
+    </group>
+  </property>
+</definitions>

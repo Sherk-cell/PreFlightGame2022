@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Writing Modes Level 3
+W3C Candidate Recommendation, 15 December 2015
+http://www.w3.org/TR/2015/CR-css-writing-modes-3-20151215/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="direction" declared-in="3.0" url="http://www.w3.org/TR/css-writing-modes-3/#propdef-direction" applies="all elements"
+            rules="noname,@page,page-margin"
+            inherited="yes" percentage="n/a" animatable="no" media="visual" browsers="C2.0,FF1.0,IE5.5,O9.2,S1.3">
+    <description><![CDATA[
+      <p>This property specifies the inline base direction or directionality of any bidi paragraph, embedding, isolate, or override
+        established by the box. (See
+        <see cref="P:unicode-bidi"/>.) In addition, it informs the ordering of table column layout, the direction of horizontal overflow,
+        and the default alignment of text within a line, and other layout effects that depend on the box’s inline base direction.</p>
+      ]]></description>
+    <group type="or">
+      <name value="ltr" tooltip="This value sets inline base direction (bidi directionality) to line-left-to-line-right."/>
+      <name value="rtl" tooltip="This value sets inline base direction (bidi directionality) to line-right-to-line-left."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="unicode-bidi" declared-in="3.0" url="http://www.w3.org/TR/css-writing-modes-3/#propdef-unicode-bidi"
+            applies="all elements, but see prose" initial="normal" inherited="no" percentage="n/a" media="visual" animatable="no"
+            browsers="C2.0,FF1.0,IE5.5,O9.2,S1.3">
+    <description><![CDATA[
+      <p>Normally (i.e. when unicode-bidi is normal) an inline box is transparent to the unicode bidi algorithm; content is ordered as if
+        the box’s boundaries were not there. Other values of the unicode-bidi property cause inline boxes to create scopes within the
+        algorithm, and to override the intrinsic directionality of text. </p>
+      ]]></description>
+    <group type="or">
+      <name value="normal"
+            tooltip="The box does not open an additional level of embedding with respect to the bidirectional algorithm. For inline boxes, implicit reordering works across box boundaries."/>
+      <name value="embed"
+            tooltip="If the box is inline, this value creates a directional embedding by opening an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the direction property. Inside the box, reordering is done implicitly. This value has no effect on boxes that are not inline."/>
+      <name value="isolate"
+            tooltip="On an inline box, this bidi-isolates its contents. This is similar to a directional embedding (and increases the embedding level accordingly) except that each sequence of inline-level boxes uninterrupted by any block boundary or forced paragraph break is treated as an isolated sequence: the content within the sequence is ordered as if inside an independent paragraph with the base directionality specified by the box’s direction property. for the purpose of bidi resolution in its containing bidi paragraph, the sequence is treated as if it were a single Object Replacement Character (U+FFFC). In effect, neither is the content inside the box bidi-affected by the content surrounding the box, nor is the content surrounding the box bidi-affected by the content or specified directionality of the box. However, forced paragraph breaks within the box still create a corresponding break in the containing paragraph. This value has no effect on boxes that are not inline."/>
+      <name value="bidi-override"
+            tooltip="This value puts the box’s immediate inline content in a directional override. For an inline, this means that the box acts like a directional embedding in the bidirectional algorithm, except that reordering within it is strictly in sequence according to the direction property; the implicit part of the bidirectional algorithm is ignored. For a block container, the override is applied to an anonymous inline box that surrounds all of its content."/>
+      <name value="isolate-override"
+            tooltip="This combines the isolation behavior of isolate with the directional override behavior of bidi-override: to surrounding content, it is equivalent to isolate, but within the box content is ordered as if bidi-override were specified. It effectively nests a directional override inside an isolated sequence."/>
+      <name value="plaintext"
+            tooltip="This value behaves as isolate except that for the purposes of the Unicode bidirectional algorithm, the base directionality of each of the box’s bidi paragraphs (if a block container) or isolated sequences (if an inline) is determined by following the heuristic in rules P2 and P3 of the Unicode bidirectional algorithm (rather than by using the direction property of the box)."/>
+      
+      
+      <name value="-webkit-isolate" browsers="C16"
+            tooltip="On an inline box, this bidi-isolates its contents. This is similar to a directional embedding (and increases the embedding level accordingly) except that each sequence of inline-level boxes uninterrupted by any block boundary or forced paragraph break is treated as an isolated sequence: the content within the sequence is ordered as if inside an independent paragraph with the base directionality specified by the box’s direction property. for the purpose of bidi resolution in its containing bidi paragraph, the sequence is treated as if it were a single Object Replacement Character (U+FFFC). In effect, neither is the content inside the box bidi-affected by the content surrounding the box, nor is the content surrounding the box bidi-affected by the content or specified directionality of the box. However, forced paragraph breaks within the box still create a corresponding break in the containing paragraph. This value has no effect on boxes that are not inline."/>
+      <name value="-moz-isolate" browsers="FF10"
+            tooltip="On an inline box, this bidi-isolates its contents. This is similar to a directional embedding (and increases the embedding level accordingly) except that each sequence of inline-level boxes uninterrupted by any block boundary or forced paragraph break is treated as an isolated sequence: the content within the sequence is ordered as if inside an independent paragraph with the base directionality specified by the box’s direction property. for the purpose of bidi resolution in its containing bidi paragraph, the sequence is treated as if it were a single Object Replacement Character (U+FFFC). In effect, neither is the content inside the box bidi-affected by the content surrounding the box, nor is the content surrounding the box bidi-affected by the content or specified directionality of the box. However, forced paragraph breaks within the box still create a corresponding break in the containing paragraph. This value has no effect on boxes that are not inline."/>
+      <name value="-moz-isolate-override" browsers="FF10"
+            tooltip="This combines the isolation behavior of isolate with the directional override behavior of bidi-override: to surrounding content, it is equivalent to isolate, but within the box content is ordered as if bidi-override were specified. It effectively nests a directional override inside an isolated sequence."/>
+      <name value="-moz-plaintext" browsers="FF10"
+            tooltip="This value behaves as isolate except that for the purposes of the Unicode bidirectional algorithm, the base directionality of each of the box’s bidi paragraphs (if a block container) or isolated sequences (if an inline) is determined by following the heuristic in rules P2 and P3 of the Unicode bidirectional algorithm (rather than by using the direction property of the box)."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="writing-mode" declared-in="3.0" url="http://www.w3.org/TR/css-writing-modes-3/#propdef-writing-mode"
+            applies="All elements except table row groups, table column groups, table rows, table columns, ruby base container, ruby annotation container"
+            initial="horizontal-tb" inherited="yes" percentage="n/a" media="visual" animatable="no" browsers="IE8.0">
+    <group type="or">
+      <name value="horizontal-tb"
+            tooltip="Top-to-bottom block flow direction. Both the writing mode and the typographic mode are horizontal."/>
+      <name value="vertical-rl" tooltip="Right-to-left block flow direction. Both the writing mode and the typographic mode are vertical."/>
+      <name value="vertical-lr" tooltip="Left-to-right block flow direction. Both the writing mode and the typographic mode are vertical."/>
+      <name value="sideways-rl"
+            tooltip="Right-to-left block flow direction. The writing mode is vertical, while the typographic mode is horizontal. This value is at-risk and may be dropped during CR."/>
+      <name value="sideways-lr"
+            tooltip="Left-to-right block flow direction. The writing mode is vertical, while the typographic mode is horizontal. This value is at-risk and may be dropped during CR."/>
+      <inline id="ms-writing-mode-values" inline="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="writing-mode" prefix="webkit" browsers="C16"/>
+
+  <property id="text-orientation" declared-in="3.0" url="http://www.w3.org/TR/css-writing-modes-3/#propdef-text-orientation"
+            applies="all elements except table row groups, rows, column groups, and columns" initial="mixed" inherited="yes"
+            percentage="n/a" media="visual" animatable="no">
+    <description><![CDATA[
+      <p>This property specifies the orientation of text within a line. Current values only have an effect in vertical typographic modes:
+        the property has no effect on boxes in horizontal typographic modes. </p>
+      ]]></description>
+    <group type="or">
+      <name value="mixed"
+            tooltip="In vertical writing modes, typographic character units from horizontal-only scripts are typeset sideways, i.e. 90° clockwise from their standard orientation in horizontal text. Typographic character units from vertical scripts are typeset with their intrinsic orientation. See Vertical Orientations for further details. This value is typical for layout of dominantly vertical-script text."/>
+      <name value="upright"
+            tooltip="In vertical writing modes, typographic character units from horizontal-only scripts are typeset upright, i.e. in their standard horizontal orientation. Typographic character units from vertical scripts are typeset with their intrinsic orientation and shaped normally. See Vertical Orientations for further details. This value causes the used value of direction to be ltr, and for the purposes of bidi reordering, causes all characters to be treated as strong LTR."/>
+      <name value="sideways"
+            tooltip="In vertical writing modes, this causes all text to be typeset sideways, as if in a horizontal layout, but rotated 90° clockwise."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="glyph-orientation-vertical" declared-in="3.0"
+            url="http://www.w3.org/TR/css-writing-modes-3/#propdef-glyph-orientation-vertical" applies="n/a" initial="n/a" inherited="yes"
+            percentage="n/a" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>Some SVG user agents will need to process documents containing the obsolete SVG glyph-orientation-vertical property, which was
+        defined to accept an <span class="css">auto</span> keyword as well as &lt;angle&gt; and &lt;integer&gt; values representing
+        multiples of 90&deg;. While supporting this property is <em>optional</em>, UAs that do so must alias glyph-orientation-vertical as a
+        shorthand of
+        <see cref="P:text-orientation"/></p>
+      ]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <text value="0deg"/>
+      <text value="90deg"/>
+      <text value="0"/>
+      <text value="90"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="text-combine-upright" declared-in="3.0" url="http://www.w3.org/TR/css-writing-modes-3/#propdef-text-combine-upright"
+            applies="non-replaced inline elements" initial="none" inherited="yes" percentage="n/a" media="visual" animatable="no">
+    <description><![CDATA[
+      <p>This property specifies the combination of multiple typographic character units into the space of a single typographic character
+        unit. If the combined text is wider than 1em, the UA must fit the contents within 1em, see below. The resulting composition is
+        treated as a single upright glyph for the purposes of layout and decoration. This property only has an effect in vertical writing
+        modes.</p>
+      ]]></description>
+    <group type="or">
+      <name value="none" tooltip="No special processing."/>
+      <name value="all"
+            tooltip="Attempt to typeset horizontally all consecutive typographic character units within the box such that they take up the space of a single typographic character unit within the vertical line box."/>
+      <group
+          tooltip="Attempt to typeset horizontally each maximal sequence of consecutive ASCII digits (U+0030–U+0039) that has as many or fewer digits than the specified integer such that it takes up the space of a single typographic character unit within the vertical line box. If the integer is omitted, it computes to 2. Integers outside the range 2-4 are invalid.">
+        <name value="digits"/>
+        <integer min="0"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

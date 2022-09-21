@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+
+  <pseudo-class id="not" declared-in="4.0" url="https://drafts.csswg.org/selectors-4/#negation"
+                tooltip="Matches an element that is not represented by the argument.">
+    <description><![CDATA[The negation pseudo-class, <b>:not(X)</b>, is a functional pseudo-class taking a selector list as an argument.
+     It represents an element that is not represented by its argument.]]></description>
+    <selector comma-separated="yes" max="-1"/>
+  </pseudo-class>
+
+
+  <property id="scrollbar-gutter" declared-in="4.0" url="https://drafts.csswg.org/css-overflow-4/#propdef-scrollbar-gutter"
+            applies="all elements" inherited="yes" initial="auto">
+    <description>
+      <![CDATA[
+      <p>This property affects the presence of scrollbar gutters placed at the inline start edge or inline end edge of the box.</p>
+      ]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <name value="stable"/>
+      <name value="always"/>
+      <name value="both"/>
+      <name value="force"/>
+    </group>
+  </property>
+
+</definitions>

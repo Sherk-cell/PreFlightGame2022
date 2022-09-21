@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Media Queries Level 4
+W3C Candidate Recommendation, 5 September 2017
+https://www.w3.org/TR/2017/CR-mediaqueries-4-20170905/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <media-feature id="any-hover" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-any-hover" min-max="no">
+    <description><![CDATA[<p>The
+ <see cref="P:any-pointer" /> and any-hover media features are identical to the
+ <see cref="P:pointer" /> and
+ <see cref="P:hover" /> media features, but they correspond to the union of capabilities of all the pointing devices available to the user. In the case of
+ <see cref="P:any-pointer" />, more than one of the values can match, if different pointing devices have different characteristics.</p>]]></description>
+    <group type="or">
+      <name value="none"/>
+      <name value="hover"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="any-pointer" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-any-pointer" min-max="no">
+    <group type="or">
+      <name value="none"/>
+      <name value="coarse"/>
+      <name value="fine"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="aspect-ratio" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-aspect-ratio" min-max="yes"
+                 media="bitmap">
+    <description><![CDATA[<p>The aspect-ratio media feature is defined as the ratio of the value of the
+ <see cref="P:width" /> media feature to the value of the
+ <see cref="P:height" /> media feature.</p>]]></description>
+    <group type="or">
+      <inline id="ratio"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="color" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-color" min-max="yes">
+    <description>
+      <![CDATA[<p>The color media feature describes the number of bits per color component of the output device. If the device is not a color device, the value is zero.</p>]]></description>
+    <group type="or">
+      <integer/>
+    </group>
+  </media-feature>
+
+  <media-feature id="color-gamut" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-color-gamut" min-max="no">
+    <description>
+      <![CDATA[<p>The color-gamut media feature describes the approximate range of colors that are supported by the UA and output device. That is, if the UA receives content with colors in the specified space it can cause the output device to render the appropriate color, or something appropriately close enough.</p>]]></description>
+    <group type="or">
+      <name value="srgb"
+            tooltip="The output device can support approximately the sRGB gamut or more. Note: It is expected that the vast majority of color displays will be able to return true to a query of this type."/>
+      <name value="p3"
+            tooltip="The output device can support approximately the gamut specified by the DCI P3 Color Space or more. Note: The p3 gamut is larger than and includes the srgb gamut."/>
+      <name value="rec2020"
+            tooltip="The output device can support approximately the gamut specified by the ITU-R Recommendation BT.2020 Color Space or more. Note: The rec2020 gamut is larger than and includes the p3 gamut."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="color-index" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-color-index" min-max="yes">
+    <description>
+      <![CDATA[<p>The color-index media feature describes the number of entries in the color lookup table of the output device. If the device does not use a color lookup table, the value is zero.</p>]]></description>
+    <group type="or">
+      <integer/>
+    </group>
+  </media-feature>
+
+  <media-feature id="device-aspect-ratio" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-device-aspect-ratio"
+                 min-max="yes" media="bitmap">
+    <description><![CDATA[<p>The 'device-aspect-ratio media feature is defined as the ratio of the value of the
+ <see cref="P:device-width" /> media feature to the value of the 'device-height media feature.</p>]]></description>
+    <group type="or">
+      <inline id="ratio"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="device-height" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-device-height" min-max="yes">
+    <description>
+      <![CDATA[<p>The device-height media feature describes the height of the rendering surface of the output device. For continuous media, this is the height of the Web-exposed screen area. For paged media, this is the height of the page sheet size.</p>]]></description>
+    <group type="or">
+      <length/>
+    </group>
+  </media-feature>
+
+  <media-feature id="device-width" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-device-width" min-max="yes">
+    <description>
+      <![CDATA[<p>The device-width media feature describes the width of the rendering surface of the output device. For continuous media, this is the width of the Web-exposed screen area. For paged media, this is the width of the page sheet size.</p>]]></description>
+    <group type="or">
+      <length/>
+    </group>
+  </media-feature>
+
+  <media-feature id="grid" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-grid" min-max="no"
+                 media="visual tactile bitmap">
+    <description>
+      <![CDATA[<p>The grid media feature is used to query whether the output device is grid or bitmap. If the output device is grid-based (e.g., a “tty” terminal, or a phone display with only one fixed font), the value will be 1. Otherwise, the value will be 0.</p>]]></description>
+    <group type="or">
+      <name value="1"/>
+      <name value="0"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="height" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-height" min-max="yes">
+    <description>
+      <![CDATA[<p>The height media feature describes the height of the targeted display area of the output device. For continuous media, this is the height of the viewport including the size of a rendered scroll bar (if any). For paged media, this is the height of the page box.</p>]]></description>
+    <group type="or">
+      <length/>
+    </group>
+  </media-feature>
+
+  <media-feature id="hover" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-hover" min-max="no">
+    <group type="or">
+      <name value="none"
+            tooltip="Indicates that the primary pointing device can’t hover, or that there is no pointing device. Examples include touchscreens and screens that use a basic drawing stylus. Pointing devices that can hover, but for which doing so is inconvenient and not part of the normal way they are used, also match this value. For example, a touchscreen where a long press is treated as hovering would match hover: none."/>
+      <name value="hover"
+            tooltip="Indicates that the primary pointing device can easily hover over parts of the page. Examples include mice and devices that physically point at the screen, like the Nintendo Wii controller."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="monochrome" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-monochrome" min-max="yes">
+    <description>
+      <![CDATA[<p>The monochrome media feature describes the number of bits per pixel in a monochrome frame buffer. If the device is not a monochrome device, the output device value will be 0.</p>]]></description>
+    <group type="or">
+      <integer/>
+    </group>
+  </media-feature>
+
+  <!-- We already have the same 'orientation' definition in css3-mediaqueries.xml
+   
+  <media-feature id="orientation" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-orientation" min-max="no"
+                 media="bitmap">
+    <group type="or">
+      <name value="portrait"
+            tooltip="The orientation media feature is portrait when the value of the height media feature is greater than or equal to the value of the width media feature."/>
+      <name value="landscape" tooltip="Otherwise orientation is landscape."/>
+    </group>
+  </media-feature>
+  -->
+
+  <media-feature id="overflow-block" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-overflow-block"
+                 min-max="no">
+    <description>
+      <![CDATA[<p>The overflow-block media feature describes the behavior of the device when content overflows the initial containing block in the block axis.</p>]]></description>
+    <group type="or">
+      <name value="none"
+            tooltip="There is no affordance for overflow in the block axis; any overflowing content is simply not displayed. Examples: billboards"/>
+      <name value="scroll"
+            tooltip="Overflowing content in the block axis is exposed by allowing users to scroll to it. Examples: computer screens"/>
+      <name value="optional-paged"
+            tooltip="Overflowing content in the block axis is exposed by allowing users to scroll to it, but page breaks can be manually triggered (such as via break-inside, etc) to cause the following content to display on the following page. Examples: slideshows"/>
+      <name value="paged"
+            tooltip="Content is broken up into discrete pages; content that overflows one page in the block axis is displayed on the following page. Examples: printers, ebook readers"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="overflow-inline" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-overflow-inline"
+                 min-max="no">
+    <description>
+      <![CDATA[<p>The overflow-inline media feature describes the behavior of the device when content overflows the initial containing block in the inline axis.</p>]]></description>
+    <group type="or">
+      <name value="none"
+            tooltip="There is no affordance for overflow in the inline axis; any overflowing content is simply not displayed."/>
+      <name value="scroll" tooltip="Overflowing content in the inline axis is exposed by allowing users to scroll to it."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="pointer" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-pointer" min-max="no">
+    <group type="or">
+      <name value="none" tooltip="The primary input mechanism of the device does not include a pointing device."/>
+      <name value="coarse"
+            tooltip="The primary input mechanism of the device includes a pointing device of limited accuracy. Examples include touchscreens and motion-detection sensors (like the Kinect peripheral for the Xbox.)"/>
+      <name value="fine"
+            tooltip="The primary input mechanism of the device includes an accurate pointing device. Examples include mice, touchpads, and drawing styluses."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="resolution" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-resolution" min-max="yes"
+                 media="bitmap">
+    <description>
+      <![CDATA[<p>The resolution media feature describes the resolution of the output device, i.e. the density of the pixels, taking into account the page zoom but assuming a pinch zoom of 1.0.</p>]]></description>
+    <group type="or">
+      <resolution/>
+      <name value="infinite"/>
+    </group>
+  </media-feature>
+
+  <media-feature id="scan" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-scan" min-max="no" media="tv">
+    <description><![CDATA[<p>The scan media feature describes the scanning process of some output devices.</p>]]></description>
+    <group type="or">
+      <name value="interlace"
+            tooltip="CRT and some types of plasma TV screens used “interlaced” rendering, where video frames alternated between specifying only the “even” lines on the screen and only the “odd” lines, exploiting various automatic mental image-correction abilities to produce smooth motion. This allowed them to simulate a higher FPS broadcast at half the bandwidth cost. When displaying on interlaced screens, authors should avoid very fast movement across the screen to avoid “combing”, and should ensure that details on the screen are wider than 1px to avoid “twitter”."/>
+      <name value="progressive"
+            tooltip="A screen using “progressive” rendering displays each screen fully, and needs no special treatment. Most modern screens, and all computer screens, use progressive rendering."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="update" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-update" min-max="no">
+    <description>
+      <![CDATA[<p>The update media feature is used to query the ability of the output device to modify the apearance of content once it has been rendered. It accepts the following values:</p>]]></description>
+    <group type="or">
+      <name value="none" tooltip="Once it has been rendered, the layout can no longer be updated. Example: documents printed on paper."/>
+      <name value="slow"
+            tooltip="The layout may change dynamically according to the usual rules of CSS, but the output device is not able to render or display changes quickly enough for them to be perceived as a smooth animation. Example: E-ink screens or severely under-powered devices."/>
+      <name value="fast"
+            tooltip="The layout may change dynamically according to the usual rules of CSS, and the output device is not unusually constrained in speed, so regularly-updating things like CSS Animations can be used. Example: computer screens."/>
+    </group>
+  </media-feature>
+
+  <media-feature id="width" declared-in="4.0" url="https://www.w3.org/TR/mediaqueries-4/#descdef-media-width" min-max="yes">
+    <description>
+      <![CDATA[<p>The width media feature describes the width of the targeted display area of the output device. For continuous media, this is the width of the viewport (as described by CSS2, section 9.1.1 [CSS21]) including the size of a rendered scroll bar (if any). For paged media, this is the width of the page box (as described by CSS2, section 13.2 [CSS21]).</p>]]></description>
+    <group type="or">
+      <length/>
+    </group>
+  </media-feature>
+</definitions>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Containment Module Level 1
+W3C First Public Working Draft, 21 February 2017
+https://www.w3.org/TR/2017/WD-css-contain-1-20170221/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="contain" declared-in="3.0" url="https://www.w3.org/TR/css-contain-1/#propdef-contain" applies="all elements" initial="none"
+            inherited="no" percentage="n/a">
+    <description><![CDATA[
+      <p>The contain property allows an author to indicate that an element and its contents are, as much as possible, <em>independent</em>
+        of the rest of the document tree. This allows user agents to utilize much stronger optimizations when rendering a page using contain
+        properly, and allows authors to be confident that their page won’t accidentally fall into a slow code path due to an innocuous
+        change.</p>
+      ]]></description>
+    <group type="or">
+      <name value="none"
+            tooltip="This value indicates that the property has no effect. The element renders as normal, with no containment effects applied."/>
+      <name value="strict"
+            tooltip="This value turns on all forms of containment for the element. In other words, it behaves the same as contain: size layout style paint;, so that its contents are guaranteed to have no effect on the rest of the page outside the element’s bounds."/>
+      <name value="content"
+            tooltip="This value turns on all forms of containment except size containment for the element. In other words, it behaves the same as contain: layout style paint;. Note: contain: content is reasonably &quot;safe&quot; to apply widely; its effects are fairly minor in practice, and most content won’t run afoul of its restrictions. However, because it doesn’t apply size containment, the element can still respond to the size of its contents, which can cause layout-invalidation to percolate further up the tree than desired. Use contain: strict when possible, to gain as much containment as you can."/>
+      <group type="any">
+        <name value="size"
+              tooltip="The value turns on size containment for the element. This ensures that the containing element can be laid out without needing to examine its descendants."/>
+        <name value="layout"
+              tooltip="This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa."/>
+        <name value="style"
+              tooltip="This value turns on style containment for the element. This ensures that, for properties which can have effects on more than just an element and its descendants, those effects don’t escape the containing element."/>
+        <name value="paint"
+              tooltip="This value turns on paint containment for the element. This ensures that the descendants of the containing element don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+</definitions>

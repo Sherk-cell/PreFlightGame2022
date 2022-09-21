@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Backgrounds and Borders Module Level 3
+W3C Candidate Recommendation, 17 October 2017
+https://www.w3.org/TR/2017/CR-css-backgrounds-3-20171017/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <named-value id="length-percentage" declared-in="3.0">
+    <group type="or">
+      <length/>
+      <percentage/>
+    </group>
+  </named-value>
+
+  <named-value id="bg-image" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-bg-image">
+    <group type="or">
+      <inline id="image"/>
+      <name value="none"/>
+    </group>
+  </named-value>
+
+  <named-value id="repeat-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-repeat-style">
+    <group type="or">
+      <name value="repeat-x"/>
+      <name value="repeat-y"/>
+      <group type="or" max="2">
+        <name value="repeat"/>
+        <name value="space"/>
+        <name value="round"/>
+        <name value="no-repeat"/>
+      </group>
+    </group>
+  </named-value>
+
+  <named-value id="attachment" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-attachment">
+    <group type="or">
+      <name value="scroll" tooltip="The background is fixed with regard to the element itself and does not scroll with its contents."/>
+      <name value="fixed" tooltip="The background is fixed with regard to the viewport."/>
+      <name value="local" tooltip="The background is fixed with regard to the element's contents."/>
+    </group>
+  </named-value>
+
+  <named-value id="bg-position" declared-in="3.0" url="http://www.w3.org/TR/css3-background/#ltbg-positiongt">
+    <group type="or">
+      <group type="or">
+        <name value="left"/>
+        <name value="center"/>
+        <name value="right"/>
+        <name value="top"/>
+        <name value="bottom"/>
+        <percentage/>
+        <length/>
+      </group>
+
+      <group>
+        <group type="or">
+          <name value="left"/>
+          <name value="center"/>
+          <name value="right"/>
+          <percentage/>
+          <length/>
+        </group>
+        <group type="or">
+          <name value="top"/>
+          <name value="center"/>
+          <name value="bottom"/>
+          <percentage/>
+          <length/>
+        </group>
+      </group>
+
+      <group type="and">
+        <group type="or">
+          <name value="center"/>
+          <group>
+            <group type="or">
+              <name value="left"/>
+              <name value="right"/>
+            </group>
+            <group type="or" min="0">
+              <percentage/>
+              <length/>
+            </group>
+          </group>
+        </group>
+        <group type="or">
+          <name value="center"/>
+          <group>
+            <group type="or">
+              <name value="top"/>
+              <name value="bottom"/>
+            </group>
+            <group type="or" min="0">
+              <percentage/>
+              <length/>
+            </group>
+          </group>
+        </group>
+      </group>
+
+      <group type="and">
+        <group type="or">
+          <name value="center"/>
+          <group>
+            <group type="or">
+              <name value="top"/>
+              <name value="bottom"/>
+            </group>
+            <group type="or" min="0">
+              <percentage/>
+              <length/>
+            </group>
+          </group>
+        </group>
+        <group type="or">
+          <name value="center"/>
+          <group>
+            <group type="or">
+              <name value="left"/>
+              <name value="right"/>
+            </group>
+            <group type="or" min="0">
+              <percentage/>
+              <length/>
+            </group>
+          </group>
+        </group>
+      </group>
+
+    </group>
+  </named-value>
+
+  <named-value id="box" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-box">
+    <group type="or">
+      <name value="border-box" tooltip="The position is relative to the border box."/>
+      <name value="padding-box"
+            tooltip="The position is relative to the padding box. (For single boxes 0 0 is the upper left corner of the padding edge, 100% 100% is the lower right corner.)"/>
+      <name value="content-box" tooltip="The position is relative to the content box."/>
+    </group>
+  </named-value>
+
+  <named-value id="bg-size" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-bg-size">
+    <group type="or">
+      <group type="or" max="2">
+        <inline id="length-percentage"/>
+        <name value="auto"/>
+      </group>
+      <name value="cover"/>
+      <name value="contain"/>
+    </group>
+  </named-value>
+
+  <named-value id="bg-layer" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-bg-layer">
+    <group type="any">
+      <inline id="bg-image"/>
+      <group>
+        <position/>
+        <group min="0">
+          <text value="/"/>
+          <inline id="bg-size"/>
+        </group>
+      </group>
+      <inline id="repeat-style"/>
+      <inline id="attachment"/>
+      <inline id="box"/>
+      <inline id="box"/>
+    </group>
+  </named-value>
+
+  <named-value id="final-bg-layer" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-final-bg-layer">
+    <group type="any">
+      <inline id="bg-image"/>
+      <group>
+        <position/>
+        <group min="0">
+          <text value="/"/>
+          <inline id="bg-size"/>
+        </group>
+      </group>
+      <inline id="repeat-style"/>
+      <inline id="attachment"/>
+      <inline id="box"/>
+      <inline id="box"/>
+      <property id="background-color"/>
+    </group>
+  </named-value>
+
+  <named-value id="line-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-line-style">
+    <group type="or">
+      <name value="none"
+            tooltip="No border. Color and width are ignored (i.e., the border has width 0). Note this means that the initial value of border-image-width will also resolve to zero."/>
+      <name value="hidden"
+            tooltip="Same as none, but has different behavior in the border conflict resolution rules for border-collapsed tables [CSS2]."/>
+      <name value="dotted" tooltip="A series of round dots."/>
+      <name value="dashed" tooltip="A series of square-ended dashes."/>
+      <name value="solid" tooltip="A single line segment."/>
+      <name value="double"
+            tooltip="Two parallel solid lines with some space between them. (The thickness of the lines is not specified, but the sum of the lines and the space must equal border-width.)"/>
+      <name value="groove"
+            tooltip="Looks as if it were carved in the canvas. (This is typically achieved by creating a “shadow” from two colors that are slightly lighter and darker than the border-color.)"/>
+      <name value="ridge" tooltip="Looks as if it were coming out of the canvas."/>
+      <name value="inset"
+            tooltip="Looks as if the content on the inside of the border is sunken into the canvas. Treated as ridge in the collapsing border model. [CSS2]"/>
+      <name value="outset"
+            tooltip="Looks as if the content on the inside of the border is coming out of the canvas. Treated as groove in the collapsing border model. [CSS2]"/>
+    </group>
+  </named-value>
+
+  <named-value id="line-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-line-width">
+    <group type="or">
+      <length tooltip="Represents an outset of the specified length. Negative values are invalid."/>
+      <name value="thin"/>
+      <name value="medium"/>
+      <name value="thick"/>
+    </group>
+  </named-value>
+
+  <named-value id="shadow" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow">
+    <group type="and">
+      <name value="inset"
+            tooltip="If present, the inset keyword changes the drop shadow from an outer box-shadow (one that shadows the box onto the canvas, as if it were lifted above the canvas) to an inner box-shadow (one that shadows the canvas onto the box, as if the box were cut out of the canvas and shifted behind it)."
+            min="0"/>
+      <length tooltip="Represents an outset of the specified length. Negative values are invalid." min="2" max="4"/>
+      <inline id="color"
+              tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."
+              min="0"/>
+    </group>
+  </named-value>
+
+  <property id="background" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background" applies="all elements"
+            rules="noname,@page,page-margin"
+            initial="see individual properties" inherited="no" percentage="see individual properties" media="visual">
+    <description><![CDATA[
+      <p>The ‘background’ property is a shorthand property for setting most background properties at the same place in the style sheet. The
+        number of comma-separated items defines the number of background layers. Given a valid declaration, for each layer the shorthand
+        first sets the corresponding layer of each of <see cref="P:background-image"/>, <see cref="P:background-position"/>,
+        <see cref="P:background-size"/>, <see cref="P:background-repeat"/>, <see cref="P:background-origin"/>,
+        <see cref="P:background-size"/>, <see cref="P:background-repeat"/>, <see cref="P:background-origin"/>,
+        <see cref="P:background-clip"/> and <see cref="P:background-attachment"/> to that property's initial value, then assigns any
+        explicit values specified for this layer in the declaration. Finally <see cref="P:background-color"/> is set to the specified color,
+        if any, else set to its initial value.</p>
+      ]]></description>
+    <group type="or">
+      <group>
+        <group min="0" max="-1">
+          <!--  comma-separated="yes" doesn't work for this case, because comma may be both separating and trailing (before bg-layer) -->
+          <inline id="bg-layer"/>
+          <text value=","/>
+        </group>
+        <inline id="final-bg-layer"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-attachment" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-attachment"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="scroll" inherited="no" percentage="N/A" media="visual"
+            browsers="C1.0,FF3.6,IE9.0,O10.5,S1.3" animatable="no">
+    <description><![CDATA[
+      <p>If background images are specified, this property specifies whether they are fixed with regard to the <em class="index" id="viewport">viewport</em>
+        (<dfn id="fixed">‘<code class="css">fixed</code>’</dfn>) or scroll along with the element (<dfn id="scroll">‘<code class="css">scroll</code>’</dfn>)
+        or its contents (<dfn id="local">‘<code class="css">local</code>’</dfn>). The property's value is given as a comma-separated list of
+        &lt;attachment&gt; keywords.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="attachment" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-clip" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-clip"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="border-box" inherited="no" percentage="N/A" media="visual"
+            browsers="C1.0,FF4.0,IE9.0,O10.5,S3.0" animatable="no">
+    <description><![CDATA[
+      <p>Determines the  <strong>background painting area</strong>, which determines the area within which the background is painted.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="box" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-color"
+            applies="all elements" initial="transparent" inherited="no" percentage="N/A" media="visual"
+            rules="noname,@page,page-margin"
+            animatable="yes" browsers="FF1.0,C1.0,IE4.0,O3.5,S1.0">
+    <description><![CDATA[
+      <p>This property sets the <span class="index" title="color!!background">background color</span> of an element.
+        The color is drawn behind any background images.</p>
+      <p>The background color is clipped according to the ‘background-clip’ value associated with the bottom-most background image.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-image" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-image"
+            applies="all elements" initial="none" inherited="no" percentage="N/A" media="visual"
+            rules="noname,@page,page-margin">
+    <description><![CDATA[
+      <p>This property sets the background image(s) of an element. Images are drawn with the first specified one on top (closest to the
+        user) and each subsequent image behind the previous one.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="bg-image" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="background-image" prefix="webkit" browsers="S4.0,C1.0"/>
+  <prefixed-property id="background-image" prefix="moz" browsers="FF3.6"/>
+  <prefixed-property id="background-image" prefix="o" browsers="O11"/>
+
+  <property id="background-origin" declared-in="3.0" url="background-image"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="padding-box" inherited="no" percentage="N/A" media="visual">
+    <description><![CDATA[
+      <p>For elements rendered as a single box, specifies the <strong>background positioning area</strong>. For
+        elements rendered as multiple boxes (e.g., inline boxes on several lines, boxes on several pages), specifies which boxes <see
+            cref="P:box-decoration-break"/> operates on to determine the background positioning area(s). </p>
+      ]]></description>
+    <group type="or">
+      <inline id="box" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-position" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-position"
+            applies="all elements" initial="0% 0%" inherited="no" browsers="C1.0,FF3.6,IE9.0,O10.5,S1.3"
+            animatable="yes" rules="noname,@page,page-margin"
+            percentage="refer to size of background positioning area minus size of background image; see text" media="visual">
+    <description><![CDATA[
+      <p>If background images have been specified, this property specifies their initial position (after any resizing) within their
+        corresponding background positioning area. </p>
+      ]]></description>
+    <group type="or">
+      <group>
+        <position/>
+        <group min="0" max="-1">
+          <text value=","/>
+          <position/>
+        </group>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-repeat" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-repeat"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="repeat" inherited="no" percentage="N/A" media="visual" browsers="C1.0,FF3.6,IE9.0,O10.5,S1.3">
+    <description><![CDATA[
+      <p>Specifies how background images are tiled after they have been sized and positioned.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="repeat-style" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="background-size" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-background-size"
+            applies="all elements" initial="auto" inherited="no" percentage="see text" media="visual"
+            browsers="C1.0,FF4.0,IE9.0,O10.0,S4.1" animatable="yes">
+    <description><![CDATA[
+      <p>Specifies the size of the background images.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="bg-size" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="background-size" prefix="webkit" browsers="C1.0,S3.0"/>
+  <prefixed-property id="background-size" prefix="moz" browsers="FF3.6"/>
+  <prefixed-property id="background-size" prefix="o" browsers="O9.5"/>
+
+  <property id="border" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border" applies="all elements"
+            rules="noname,@page,page-margin"
+            initial="See individual properties" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>The ‘border’ property is a shorthand property for setting the same width, color, and style for all four borders of a box. Unlike
+        the shorthand <see cref="P:margin"/> and <see cref="P:padding"/> properties, the ‘border’ property
+        cannot set different values on the four borders. To do so, one or more of the other border properties must be used. </p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="line-width"/>
+        <inline id="line-style"/>
+        <inline id="color"
+                tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-bottom" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="See individual properties" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This is a shorthand property for setting the width, style, and color of the top, right, bottom, and left border of a box. Omitted
+        values are set to their initial values.</p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="line-width"/>
+        <inline id="line-style"/>
+        <inline id="color"
+                tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-bottom-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom-color"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="currentColor" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property set the foreground color of the border specified by the border-style properties.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color"/>
+      <name value="-moz-use-text-color" browsers="FF10"/>
+      <name value="-o-highlight-border" browsers="O9.5"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-bottom-left-radius" declared-in="3.0"
+            url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom-left-radius"
+            rules="noname,@page,page-margin"
+            browsers="C4.0,FF4.0,IE9.0,O10.5,S5.0"
+            initial="0" inherited="no" percentage="Refer to corresponding dimension of the border box." media="visual" animatable="yes">
+    <group type="or">
+      <inline id="length-percentage" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-bottom-left-radius" prefix="webkit" browsers="C0.2,S3.0"/>
+
+  <property id="border-bottom-right-radius" declared-in="3.0"
+            url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom-right-radius" applies="all elements (but see prose)"
+            rules="noname,@page,page-margin"
+            browsers="C4.0,FF4.0,IE9.0,O10.5,S5.0"
+            initial="0" inherited="no" percentage="Refer to corresponding dimension of the border box." media="visual" animatable="yes">
+    <group type="or">
+      <inline id="length-percentage" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-bottom-right-radius" prefix="webkit" browsers="C0.2,S3.0"/>
+
+  <property id="border-bottom-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom-style"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="none" inherited="no" percentage="N/A" media="visual">
+    <description><![CDATA[
+      <p>This property sets the style of the border, unless there is a border image.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-bottom-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-bottom-width"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="medium" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property sets the thickness of the border.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-color"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="(see individual properties)" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>‘Border-color’ is a shorthand for the four ‘border-*-color’ properties. The four values set the top, right, bottom and left border,
+        respectively. A missing left is the same as right, a missing bottom is the same as top, and a missing right is also the same as
+        top.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color" max="4"/>
+      <name value="-moz-use-text-color" browsers="FF10"/>
+      <name value="-o-highlight-border" browsers="O9.5"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-image" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image"
+            rules="noname,@page,page-margin"
+            applies="See individual properties" initial="See individual properties" inherited="no" percentage="N/A" media="visual"
+            animatable="yes"
+            browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>This is a shorthand property for setting ‘border-image-source’, ‘border-image-slice’, ‘border-image-width’, ‘border-image-outset’
+        and ‘border-image-repeat’. Omitted values are set to their initial values. </p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <property id="border-image-source"/>
+        <group>
+          <property id="border-image-slice"/>
+          <group type="or" min="0">
+            <group>
+              <text value="/"/>
+              <property id="border-image-width"/>
+            </group>
+            <group>
+              <text value="/"/>
+              <property id="border-image-width" min="0"/>
+              <text value="/"/>
+              <property id="border-image-outset"/>
+            </group>
+          </group>
+        </group>
+        <property id="border-image-repeat"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-image" prefix="webkit" browsers="C7.0,S3.0"/>
+  <prefixed-property id="border-image" prefix="moz" browsers="FF3.5"/>
+  <prefixed-property id="border-image" prefix="o" browsers="O10.5"/>
+
+  <property id="border-image-outset" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image-outset"
+            applies="All elements, except internal table elements when ‘border-collapse’ is ‘collapse’" initial="0" inherited="no"
+            rules="noname,@page,page-margin"
+            percentage="N/A" media="visual" browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>The values specify the amount by which the <dfn id="border-image-area">border image area</dfn> extends beyond the border box. If it
+        has four values, they set the outsets on the top, right, bottom and left sides in that order. If the left is missing, it is the same
+        as the right; if the bottom is missing, it is the same as the top; if the right is missing, it is the same as the top. </p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="4">
+        <length tooltip="Represents an outset of the specified length. Negative values are invalid."/>
+        <number
+            tooltip="Represents an outset of the specified multiple of the corresponding computed border-width. Negative values are invalid."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-image-repeat" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image-repeat"
+            applies="All elements, except internal table elements when ‘border-collapse’ is ‘collapse’" initial="stretch" inherited="no"
+            rules="noname,@page,page-margin"
+            percentage="N/A" media="visual" browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>This property specifies how the images for the sides and the middle part of the border image are scaled and tiled. The first
+      keyword applies to the horizontal scaling and tiling of the top, middle and bottom parts, the second to the vertical scaling and
+      tiling of the left, middle and right parts; see Drawing the Border Image. If the second keyword is absent, it is assumed to be the
+      same as the first. </p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="stretch" tooltip="The image is stretched to fill the area."/>
+        <name value="repeat" tooltip="The image is tiled (repeated) to fill the area."/>
+        <name value="round"
+              tooltip="The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the image is rescaled so that it does."/>
+        <name value="space"
+              tooltip="The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-image-slice" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image-slice"
+            applies="All elements, except internal table elements when ‘border-collapse’ is ‘collapse’" initial="100%" inherited="no"
+            rules="noname,@page,page-margin"
+            percentage="refer to size of the border image" media="visual" browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>This property specifies inward offsets from the top, right, bottom, and left edges of the image, dividing it into nine regions:
+        four corners, four edges and a middle. The middle image part is discarded (treated as fully transparent) unless the ‘fill’ keyword
+        is present. (It is drawn over the background; see Drawing the Border Image.) </p>
+      ]]></description>
+    <group type="or">
+      <group type="and">
+        <group type="or" max="4">
+          <number
+              tooltip="Numbers represent pixels in the image (if the image is a raster image) or vector coordinates (if the image is a vector image)."/>
+          <percentage
+              tooltip="Percentages are relative to the size of the image: the width of the image for the horizontal offsets, the height for vertical offsets."/>
+        </group>
+        <name value="fill"
+              tooltip="The ‘fill’ keyword, if present, causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)"
+              min="0"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-image-source" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image-source"
+            applies="All elements, except internal table elements when ‘border-collapse’ is ‘collapse’" initial="none" inherited="no"
+            rules="noname,@page,page-margin"
+            percentage="N/A" media="visual" browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>Specifies an image to use in place of the rendering specified by the
+         <see cref="P:border-style" /> properties and, if given the fill keyword in
+         <see cref="P:border-image-slice" />, as an additional image backdrop for the element. If the value is <span class="css">none</span> or if the image cannot be displayed (or the property doesn’t apply), the border styles will be used; otherwise the element’s
+         <see cref="P:border-style" /> borders are not drawn.</p>
+      ]]></description>
+    <group type="or">
+      <name value="none"/>
+      <inline id="image"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-image-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-image-width"
+            applies="All elements, except table elements when ‘border-collapse’ is ‘collapse’" initial="1" inherited="no"
+            rules="noname,@page,page-margin"
+            percentage="Relative to width/height of the border image area" media="visual" browsers="C16.0,FF15,O15.0,IE11,S6.0">
+    <description><![CDATA[
+      <p>The border image is drawn inside an area called the <strong>border image area</strong>. This is an area whose boundaries by default correspond to
+        the border box, see ‘border-image-outset’. </p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="4">
+        <inline id="length-percentage"
+                tooltip="Percentages refer to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets."/>
+        <number tooltip="Numbers represent multiples of the corresponding computed border-width."/>
+        <name value="auto"
+              tooltip="If ‘auto’ is specified then the border image width is the intrinsic width or height (whichever is applicable) of the corresponding image slice (see ‘border-image-slice’). If the image does not have the required intrinsic dimension then the corresponding computed border-width is used instead."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-left" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-left"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="See individual properties" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This is a shorthand property for setting the width, style, and color of the top, right, bottom, and left border of a box. Omitted
+        values are set to their initial values. </p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="line-width"/>
+        <inline id="line-style"/>
+        <inline id="color"
+                tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-left-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-left-color"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="currentColor" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property set the foreground color of the border specified by the border-style properties.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color"/>
+      <name value="-moz-use-text-color" browsers="FF10"/>
+      <name value="-o-highlight-border" browsers="O9.5"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-left-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-left-style"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="none" inherited="no" percentage="N/A" media="visual">
+    <description><![CDATA[
+      <p>This property sets the style of the border, unless there is a border image.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-left-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-left-width"
+            rules="noname,@page,page-margin"
+            applies="" initial="medium" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property sets the thickness of the border.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-radius" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-radius"
+            rules="noname,@page,page-margin"
+            applies="all elements (but see prose)" initial="see individual properties" inherited="no" browsers="C4.0,FF4.0,IE9.0,O10.5,S5.0"
+            percentage="Refer to corresponding dimension of the border box." media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>The two length or percentage values of the ‘<code class="css">border-*-radius</code>’ properties define the radii of a quarter
+        ellipse that defines the shape of the corner of the outer border edge (see the diagram below). The first value is the horizontal
+        radius, the second the vertical radius. If the second value is omitted it is copied from the first. If either length is zero, the
+        corner is square, not rounded. Percentages for the horizontal radius refer to the width of the border box, whereas percentages for
+        the vertical radius refer to the height of the border box. Negative values are not allowed. </p>
+      ]]></description>
+    <group type="or">
+      <group>
+        <inline id="length-percentage"
+                tooltip="Percentages refer to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets."
+                max="4"/>
+        <group min="0">
+          <text value="/"/>
+          <inline id="length-percentage"
+                  tooltip="Percentages refer to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets."
+                  max="4"/>
+        </group>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-radius" prefix="webkit" browsers="C0.2,S3.0"/>
+  <prefixed-property id="border-radius" prefix="moz" browsers="FF1.0"/>
+
+  <property id="border-right" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-right"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="See individual properties" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This is a shorthand property for setting the width, style, and color of the top, right, bottom, and left border of a box. Omitted
+        values are set to their initial values. </p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="line-width"/>
+        <inline id="line-style"/>
+        <inline id="color"
+                tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-right-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-right-color"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="currentColor" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property set the foreground color of the border specified by the border-style properties.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color"/>
+      <name value="-moz-use-text-color" browsers="FF10"/>
+      <name value="-o-highlight-border" browsers="O9.5"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-right-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-right-style"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="none" inherited="no" percentage="N/A" media="visual">
+    <description><![CDATA[
+      <p>This property sets the style of the border, unless there is a border image.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-right-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-right-width"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="medium" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property sets the thickness of the border.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-style"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="(see individual properties)" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>‘Border-style’ is a shorthand for the other four. Its four values set the top, right, bottom and left border respectively. A
+        missing left is the same as right, a missing bottom is the same as top, and a missing right is also the same as top.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-style" max="4"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-top" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top" applies="all elements"
+            rules="noname,@page,page-margin"
+            initial="See individual properties" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This is a shorthand property for setting the width, style, and color of the top, right, bottom, and left border of a box. Omitted
+        values are set to their initial values. </p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="line-width"/>
+        <inline id="line-style"/>
+        <inline id="color"
+                tooltip="Specifies the color of the shadow. If the color is absent, the used color is taken from the color property."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-top-color" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top-color"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="currentColor" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property set the foreground color of the border specified by the border-style properties.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="color"/>
+      <name value="-moz-use-text-color" browsers="FF10"/>
+      <name value="-o-highlight-border" browsers="O9.5"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-top-left-radius" declared-in="3.0"
+            rules="noname,@page,page-margin"
+            url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top-left-radius" applies="all elements (but see prose)"
+            browsers="C4.0,FF4.0,IE9.0,O10.5,S5.0"
+            initial="0" inherited="no" percentage="Refer to corresponding dimension of the border box." media="visual" animatable="yes">
+    <group type="or">
+      <inline id="length-percentage" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-top-left-radius" prefix="webkit" browsers="C0.2,S3.0"/>
+
+  <property id="border-top-right-radius" declared-in="3.0"
+            rules="noname,@page,page-margin"
+            url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top-right-radius" applies="all elements (but see prose)"
+            browsers="C4.0,FF4.0,IE9.0,O10.5,S5.0"
+            initial="0" inherited="no" percentage="Refer to corresponding dimension of the border box." media="visual" animatable="yes">
+    <group type="or">
+      <inline id="length-percentage" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="border-top-right-radius" prefix="webkit" browsers="C0.2,S3.0"/>
+
+  <property id="border-top-style" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top-style"
+            rules="noname,@page,page-margin"
+            applies="all elements" initial="none" inherited="no" percentage="N/A" media="visual">
+    <description><![CDATA[
+      <p>This property sets the style of the border, unless there is a border image.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-top-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-top-width" applies=""
+            rules="noname,@page,page-margin"
+            initial="medium" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>This property sets the thickness of the border.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-width" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-border-width" applies="all elements"
+            rules="noname,@page,page-margin"
+            initial="(see individual properties)" inherited="no" percentage="see individual properties" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>‘Border-width’ is a shorthand that sets the four ‘border-*-width’ properties. If it has four values, they set top, right, bottom
+        and left in that order. If left is missing, it is the same as right; if bottom is missing, it is the same as top; if right is
+        missing, it is the same as top.</p>
+      ]]></description>
+    <group type="or">
+      <inline id="line-width" max="4"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="box-shadow" declared-in="3.0" url="https://www.w3.org/TR/css-backgrounds-3/#propdef-box-shadow" applies="all elements"
+            initial="none" inherited="no" percentage="N/A" media="visual" animatable="yes">
+    <description><![CDATA[
+      <p>The ‘box-shadow’ property attaches one or more drop-shadows to the box. The property accepts either the <strong>none</strong> value, which indicates no shadows, or a comma-separated list of shadows,
+        ordered front to back. Each shadow is given as a &lt;shadow&gt;, represented by 2-4 length values, an optional color, and an
+        optional ‘inset’ keyword. Omitted lengths are 0; omitted colors default to the value of the <see cref="P:color"/>
+        property. </p>
+      ]]></description>
+    <group type="or">
+      <name value="none"/>
+      <inline id="shadow" comma-separated="yes"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+  <prefixed-property id="box-shadow" prefix="moz"/>
+  <prefixed-property id="box-shadow" prefix="webkit"/>
+  <prefixed-property id="box-shadow" prefix="o"/>
+
+</definitions>

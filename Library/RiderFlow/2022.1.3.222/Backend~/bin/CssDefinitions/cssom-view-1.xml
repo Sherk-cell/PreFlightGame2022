@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSSOM View Module
+W3C Working Draft, 17 March 2016
+http://www.w3.org/TR/2016/WD-cssom-view-1-20160317/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="scroll-behavior" declared-in="0" url="http://www.w3.org/TR/cssom-view-1/#propdef-scroll-behavior" applies="scrolling boxes" initial="auto" inherited="no" percentage="n/a" media="visual" animatable="no">
+    <description><![CDATA[<p>The scroll-behavior property specifies the scrolling behavior for a scrolling box, when scrolling happens due to navigation or CSSOM scrolling APIs. Any other scrolls, e.g. those that are performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead.</p>]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <name value="smooth"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

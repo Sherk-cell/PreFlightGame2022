@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Custom Elements
+W3C Working Draft 13 October 2016
+https://www.w3.org/TR/custom-elements/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <pseudo-class id="defined" declared-in="3.0" url="https://www.w3.org/TR/custom-elements/#selector-defined">
+    <description><![CDATA[
+      <p>The :defined pseudo-class must match any element that is <a href="https://www.w3.org/TR/custom-elements/#concept-element-defined">defined</a>.</p>
+      ]]></description>
+  </pseudo-class>
+</definitions>

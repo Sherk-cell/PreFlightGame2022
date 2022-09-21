@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Logical Properties and Values Level 1
+W3C Working Draft, 27 August 2018
+https://www.w3.org/TR/2018/WD-css-logical-1-20180827/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="block-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-block-size" applies="Same as width and height"
+            initial="auto" inherited="yes" percentage="As for the corresponding physical property" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:width" /> and
+ <see cref="P:height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start" /> &amp;
+ <see cref="P:border-block-end" /> and
+ <see cref="P:border-inline-start" /> &amp;
+ <see cref="P:border-inline-end" />, respectively.</p>]]></description>
+    <group type="or">
+      <property id="border-block-start"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-color"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-color" /> &amp;
+ <see cref="P:border-block-end-color" /> and
+ <see cref="P:border-inline-start-color" /> &amp;
+ <see cref="P:border-inline-end-color" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-end"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top" />,
+ <see cref="P:border-bottom" />,
+ <see cref="P:border-left" />, and
+ <see cref="P:border-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <group type="any">
+        <property id="border-top-width"/>
+        <property id="border-top-style"/>
+        <inline id="color"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-end-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-end-color"
+            applies="all elements" initial="currentcolor" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-color" />,
+ <see cref="P:border-bottom-color" />,
+ <see cref="P:border-left-color" />, and
+ <see cref="P:border-right-color" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-end-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-end-style"
+            applies="all elements" initial="none" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-style" />,
+ <see cref="P:border-bottom-style" />,
+ <see cref="P:border-left-style" />, and
+ <see cref="P:border-right-style" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-end-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-end-width"
+            applies="all elements" initial="medium" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-width" />,
+ <see cref="P:border-bottom-width" />,
+ <see cref="P:border-left-width" />, and
+ <see cref="P:border-right-width" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-start"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top" />,
+ <see cref="P:border-bottom" />,
+ <see cref="P:border-left" />, and
+ <see cref="P:border-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <group type="any">
+        <property id="border-top-width"/>
+        <property id="border-top-style"/>
+        <inline id="color"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-start-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-start-color"
+            applies="all elements" initial="currentcolor" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-color" />,
+ <see cref="P:border-bottom-color" />,
+ <see cref="P:border-left-color" />, and
+ <see cref="P:border-right-color" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-start-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-start-style"
+            applies="all elements" initial="none" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-style" />,
+ <see cref="P:border-bottom-style" />,
+ <see cref="P:border-left-style" />, and
+ <see cref="P:border-right-style" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-start-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-start-width"
+            applies="all elements" initial="medium" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-width" />,
+ <see cref="P:border-bottom-width" />,
+ <see cref="P:border-left-width" />, and
+ <see cref="P:border-right-width" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-style"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-style" /> &amp;
+ <see cref="P:border-block-end-style" /> and
+ <see cref="P:border-inline-start-style" /> &amp;
+ <see cref="P:border-inline-end-style" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-block-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-block-width"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-width" /> &amp;
+ <see cref="P:border-block-end-width" /> and
+ <see cref="P:border-inline-start-width" /> &amp;
+ <see cref="P:border-inline-end-width" />, respectively. The first value represents the start edge width, and the second value represents the end edge width. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-end-end-radius" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-end-end-radius"
+            applies="all elements" initial="Same as border-top-left-radius" inherited="no" percentage="Same as border-top-left-radius"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-left-radius" />,
+ <see cref="P:border-bottom-left-radius" />,
+ <see cref="P:border-top-right-radius" />, and
+ <see cref="P:border-bottom-right-radius" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-left-radius"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-end-start-radius" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-end-start-radius"
+            applies="all elements" initial="Same as border-top-left-radius" inherited="no" percentage="Same as border-top-left-radius"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-left-radius" />,
+ <see cref="P:border-bottom-left-radius" />,
+ <see cref="P:border-top-right-radius" />, and
+ <see cref="P:border-bottom-right-radius" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-left-radius"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start" /> &amp;
+ <see cref="P:border-block-end" /> and
+ <see cref="P:border-inline-start" /> &amp;
+ <see cref="P:border-inline-end" />, respectively.</p>]]></description>
+    <group type="or">
+      <property id="border-block-start"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-color"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-color" /> &amp;
+ <see cref="P:border-block-end-color" /> and
+ <see cref="P:border-inline-start-color" /> &amp;
+ <see cref="P:border-inline-end-color" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-end"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top" />,
+ <see cref="P:border-bottom" />,
+ <see cref="P:border-left" />, and
+ <see cref="P:border-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <group type="any">
+        <property id="border-top-width"/>
+        <property id="border-top-style"/>
+        <inline id="color"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-end-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-end-color"
+            applies="all elements" initial="currentcolor" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-color" />,
+ <see cref="P:border-bottom-color" />,
+ <see cref="P:border-left-color" />, and
+ <see cref="P:border-right-color" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-end-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-end-style"
+            applies="all elements" initial="none" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-style" />,
+ <see cref="P:border-bottom-style" />,
+ <see cref="P:border-left-style" />, and
+ <see cref="P:border-right-style" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-end-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-end-width"
+            applies="all elements" initial="medium" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-width" />,
+ <see cref="P:border-bottom-width" />,
+ <see cref="P:border-left-width" />, and
+ <see cref="P:border-right-width" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-start"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top" />,
+ <see cref="P:border-bottom" />,
+ <see cref="P:border-left" />, and
+ <see cref="P:border-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <group type="any">
+        <property id="border-top-width"/>
+        <property id="border-top-style"/>
+        <inline id="color"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-start-color" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-start-color"
+            applies="all elements" initial="currentcolor" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-color" />,
+ <see cref="P:border-bottom-color" />,
+ <see cref="P:border-left-color" />, and
+ <see cref="P:border-right-color" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-color"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-start-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-start-style"
+            applies="all elements" initial="none" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-style" />,
+ <see cref="P:border-bottom-style" />,
+ <see cref="P:border-left-style" />, and
+ <see cref="P:border-right-style" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-start-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-start-width"
+            applies="all elements" initial="medium" inherited="no" percentage="n/a" animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-width" />,
+ <see cref="P:border-bottom-width" />,
+ <see cref="P:border-left-width" />, and
+ <see cref="P:border-right-width" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-style" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-style"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-style" /> &amp;
+ <see cref="P:border-block-end-style" /> and
+ <see cref="P:border-inline-start-style" /> &amp;
+ <see cref="P:border-inline-end-style" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-style" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-inline-width" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-inline-width"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:border-block-start-width" /> &amp;
+ <see cref="P:border-block-end-width" /> and
+ <see cref="P:border-inline-start-width" /> &amp;
+ <see cref="P:border-inline-end-width" />, respectively. The first value represents the start edge width, and the second value represents the end edge width. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="border-top-width" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-start-end-radius" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-start-end-radius"
+            applies="all elements" initial="Same as border-top-left-radius" inherited="no" percentage="Same as border-top-left-radius"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-left-radius" />,
+ <see cref="P:border-bottom-left-radius" />,
+ <see cref="P:border-top-right-radius" />, and
+ <see cref="P:border-bottom-right-radius" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-left-radius"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="border-start-start-radius" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-border-start-start-radius"
+            applies="all elements" initial="Same as border-top-left-radius" inherited="no" percentage="Same as border-top-left-radius"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:border-top-left-radius" />,
+ <see cref="P:border-bottom-left-radius" />,
+ <see cref="P:border-top-right-radius" />, and
+ <see cref="P:border-bottom-right-radius" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="border-top-left-radius"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inline-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inline-size"
+            applies="Same as width and height" initial="auto" inherited="yes" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:width" /> and
+ <see cref="P:height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset" applies="see individual properties"
+            initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>This shorthand property sets the
+ <see cref="P:top" />,
+ <see cref="P:right" />,
+ <see cref="P:bottom" />, and
+ <see cref="P:left" /> properties. Values are assigned to its sub-properties as for
+ <see cref="P:margin" />.</p>]]></description>
+    <group type="or">
+      <property id="top" max="4"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-block" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-block"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:inset-block-start" /> &amp;
+ <see cref="P:inset-block-end" /> and
+ <see cref="P:inset-inline-start" /> &amp;
+ <see cref="P:inset-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="top" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-block-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-block-end"
+            applies="positioned elements" initial="auto" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:top" />,
+ <see cref="P:bottom" />,
+ <see cref="P:left" />, and
+ <see cref="P:right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-block-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-block-start"
+            applies="positioned elements" initial="auto" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:top" />,
+ <see cref="P:bottom" />,
+ <see cref="P:left" />, and
+ <see cref="P:right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-inline" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-inline"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:inset-block-start" /> &amp;
+ <see cref="P:inset-block-end" /> and
+ <see cref="P:inset-inline-start" /> &amp;
+ <see cref="P:inset-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="top" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-inline-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-inline-end"
+            applies="positioned elements" initial="auto" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:top" />,
+ <see cref="P:bottom" />,
+ <see cref="P:left" />, and
+ <see cref="P:right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="inset-inline-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-inset-inline-start"
+            applies="positioned elements" initial="auto" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:top" />,
+ <see cref="P:bottom" />,
+ <see cref="P:left" />, and
+ <see cref="P:right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-block" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-block"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:margin-block-start" /> &amp;
+ <see cref="P:margin-block-end" /> and
+ <see cref="P:margin-inline-start" /> &amp;
+ <see cref="P:margin-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="margin-left" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-block-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-block-end"
+            applies="Same as margin-top" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:margin-top" />,
+ <see cref="P:margin-bottom" />,
+ <see cref="P:margin-left" />, and
+ <see cref="P:margin-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="margin-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-block-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-block-start"
+            applies="Same as margin-top" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:margin-top" />,
+ <see cref="P:margin-bottom" />,
+ <see cref="P:margin-left" />, and
+ <see cref="P:margin-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="margin-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-inline" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-inline"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:margin-block-start" /> &amp;
+ <see cref="P:margin-block-end" /> and
+ <see cref="P:margin-inline-start" /> &amp;
+ <see cref="P:margin-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="margin-left" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-inline-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-inline-end"
+            applies="Same as margin-top" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:margin-top" />,
+ <see cref="P:margin-bottom" />,
+ <see cref="P:margin-left" />, and
+ <see cref="P:margin-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="margin-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="margin-inline-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-margin-inline-start"
+            applies="Same as margin-top" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:margin-top" />,
+ <see cref="P:margin-bottom" />,
+ <see cref="P:margin-left" />, and
+ <see cref="P:margin-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="margin-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="max-block-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-max-block-size"
+            applies="same as width and height" initial="none" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:max-width" /> and
+ <see cref="P:max-height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="max-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="max-inline-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-max-inline-size"
+            applies="same as width and height" initial="none" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:max-width" /> and
+ <see cref="P:max-height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="max-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="min-block-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-min-block-size"
+            applies="same as width and height" initial="0" inherited="yes" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:min-width" /> and
+ <see cref="P:min-height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="min-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="min-inline-size" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-min-inline-size"
+            applies="same as width and height" initial="0" inherited="yes" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:min-width" /> and
+ <see cref="P:min-height" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />.</p>]]></description>
+    <group type="or">
+      <property id="min-width"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-block" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-block"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:padding-block-start" /> &amp;
+ <see cref="P:padding-block-end" /> and
+ <see cref="P:padding-inline-start" /> &amp;
+ <see cref="P:padding-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="padding-left" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-block-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-block-end"
+            applies="all elements" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:padding-top" />,
+ <see cref="P:padding-bottom" />,
+ <see cref="P:padding-left" />, and
+ <see cref="P:padding-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="padding-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-block-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-block-start"
+            applies="all elements" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:padding-top" />,
+ <see cref="P:padding-bottom" />,
+ <see cref="P:padding-left" />, and
+ <see cref="P:padding-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="padding-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-inline" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-inline"
+            applies="see individual properties" initial="see individual properties" inherited="yes" percentage="see individual properties">
+    <description><![CDATA[<p>These two shorthand properties set the
+ <see cref="P:padding-block-start" /> &amp;
+ <see cref="P:padding-block-end" /> and
+ <see cref="P:padding-inline-start" /> &amp;
+ <see cref="P:padding-inline-end" />, respectively. The first value represents the start edge style, and the second value represents the end edge style. If only one value is given, it applies to both the <span>start</span> and <span>end</span> edges.</p>]]></description>
+    <group type="or">
+      <property id="padding-left" max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-inline-end" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-inline-end"
+            applies="all elements" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:padding-top" />,
+ <see cref="P:padding-bottom" />,
+ <see cref="P:padding-left" />, and
+ <see cref="P:padding-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="padding-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="padding-inline-start" declared-in="0" url="https://www.w3.org/TR/css-logical-1/#propdef-padding-inline-start"
+            applies="all elements" initial="0" inherited="no" percentage="As for the corresponding physical property"
+            animatable="yes">
+    <description><![CDATA[<p>These properties correspond to the
+ <see cref="P:padding-top" />,
+ <see cref="P:padding-bottom" />,
+ <see cref="P:padding-left" />, and
+ <see cref="P:padding-right" /> properties. The mapping depends on the element’s
+ <see cref="P:writing-mode" />,
+ <see cref="P:direction" />, and
+ <see cref="P:text-orientation" />.</p>]]></description>
+    <group type="or">
+      <property id="padding-top"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+</definitions>

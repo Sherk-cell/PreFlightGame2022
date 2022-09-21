@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Display Module Level 3
+W3C Working Draft, 21 July 2015
+http://www.w3.org/TR/2015/WD-css-display-3-20150721/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <named-value id="display-outside" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-outside">
+    <group type="or">
+      <name value="block" tooltip="The element generates a block-level box. [CSS2]"/>
+      <name value="inline" tooltip="The element generates an inline-level box. [CSS2]"/>
+      <name value="run-in"
+            tooltip="The element generates a run-in box. Run-in elements act like inlines or blocks, depending on the surrounding elements. See §4 Run-In Layout for details."/>
+    </group>
+  </named-value>
+
+  <named-value id="display-inside" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-inside">
+    <group type="or">
+      <name value="flow"
+            tooltip="The element lays out its contents using flow layout (block-and-inline layout). If its outer display type is inline or run-in, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box. Depending on the value of other properties (such as position, float, or overflow) and whether it is itself participating in a block or inline formatting context, it either establishes a new block formatting context for its contents or integrates its contents into its parent formatting context. See CSS2.1 Chapter 9. [CSS2]"/>
+      <name value="flow-root"
+            tooltip="The element generates a block container box, and lays out its contents using flow layout. It always establishes a new block formatting context for its contents. [CSS2]"/>
+      <name value="table"
+            tooltip="The element generates a principal table wrapper box containing an additionally-generated table box, and establishes a table formatting context. [CSS2]"/>
+      <name value="flex"
+            tooltip="The element generates a principal flex container box and establishes a flex formatting context. [CSS3-FLEXBOX]"/>
+      <name value="grid"
+            tooltip="The element generates a principal grid container box, and establishes a grid formatting context. [CSS3-GRID-LAYOUT]"/>
+      <name value="ruby"
+            tooltip="The element generates a principal ruby container box, and establishes a ruby formatting context. [CSS3RUBY]"/>
+
+      <name value="-webkit-flex" browsers="C21.0,S6.1" tooltip="The element lays out its contents using flex layout."/>
+      <name value="-moz-flex" browsers="FF20" tooltip="The element lays out its contents using flex layout."/>
+      <name value="-ms-flex" browsers="IE10" tooltip="The element lays out its contents using flex layout."/>
+      <name value="-o-flex" browsers="O12.50" tooltip="The element lays out its contents using flex layout."/>
+    </group>
+  </named-value>
+
+  <named-value id="display-listitem" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-listitem">
+    <group type="or">
+      <group type="and">
+        <name value="list-item"/>
+        <inline id="display-outside" min="0"/>
+        <group type="or" min="0">
+          <name value="flow"/>
+          <name value="flow-root"/>
+        </group>
+      </group>
+    </group>
+  </named-value>
+
+  <named-value id="display-internal" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-internal">
+    <group type="or">
+      <name value="table-row-group"/>
+      <name value="table-header-group"/>
+      <name value="table-footer-group"/>
+      <name value="table-row"/>
+      <name value="table-cell"/>
+      <name value="table-column-group"/>
+      <name value="table-column"/>
+      <name value="table-caption"/>
+      <name value="ruby-base"/>
+      <name value="ruby-text"/>
+      <name value="ruby-base-container"/>
+      <name value="ruby-text-container"/>
+    </group>
+  </named-value>
+
+  <named-value id="display-box" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-box">
+    <group type="or">
+      <name value="contents"
+            tooltip="The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree. contents currently only has an effect on box generation and layout. Other things that care about the document tree are unaffected, like counter scopes. Is this what we want?"/>
+      <name value="none"
+            tooltip="The element and its descendants generates no boxes. It is recommended that box-suppress be used instead of display: none, so that the element’s display type is automatically preserved for when it’s no longer suppressed."/>
+    </group>
+  </named-value>
+
+  <named-value id="display-legacy" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#typedef-display-legacy">
+    <group type="or">
+      <name value="inline-block" tooltip="Behaves as inline flow-root."/>
+      <name value="inline-list-item"/>
+      <name value="inline-table" tooltip="Behaves as inline table."/>
+      <name value="inline-flex" browsers="FF18.0,O12.50" tooltip="Behaves as inline flex."/>
+      <name value="inline-grid" tooltip="Behaves as inline grid."/>
+    </group>
+  </named-value>
+
+  <property id="display" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#propdef-display" applies="all elements" initial="inline"
+            rules="noname,@page,page-margin"
+            inherited="no" percentage="n/a" animatable="no">
+    <description><![CDATA[
+      <p>The display property defines box’s <strong>display type</strong>, which consists of the two basic qualities of how an element
+        generates boxes:</p>
+      <ul>
+        <li>the inner display type, which defines the kind of formatting context it generates, dictating how its descendant boxes are laid
+          out.
+        </li>
+        <li>the outer display type, which dictates how the box participates in its parent formatting context.</li>
+      </ul>
+      <p>Some display values have additional side-effects: such as list-item, which also generates a ::marker pseudo-element, and none,
+        which causes the element’s entire subtree to be left out of the box tree.</p>
+      ]]></description>
+    <group type="or">
+      <group type="any">
+        <inline id="display-outside"/>
+        <inline id="display-inside"/>
+      </group>
+      <inline id="display-listitem"/>
+      <inline id="display-internal"/>
+      <inline id="display-box"/>
+      <inline id="display-legacy"/>
+      <inline id="ms-display-values"/>
+      <inline id="mozilla-display-values"/>
+      <inline id="webkit-display-values"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="box-suppress" declared-in="3.0" url="http://www.w3.org/TR/css-display-3/#propdef-box-suppress" applies="all elements"
+            initial="show" inherited="no" percentage="n/a" animatable="no">
+    <description><![CDATA[
+      <p>The display: none value was historically used as a &quot;toggle&quot; to switch between showing and hiding an element. Making this
+        reversible requires either setting up the CSS cascade carefully, or remembering what the
+        <see cref="P:display"/> value was before it was set to none. To make this common use-case easier, this module introduces the
+        separate box-suppress property to do the same thing, so that toggling whether or not an element appears in the formatting tree can
+        now be done without affecting its display type when it <em>is</em> displayed.</p>
+      ]]></description>
+    <group type="or">
+      <name value="show" tooltip="The element generates boxes as normal, per its display-* properties."/>
+      <name value="discard" tooltip="The element generates no boxes at all."/>
+      <name value="hide"
+            tooltip="The element generates boxes as normal, but those boxes do not participate in layout in any way, and must not be displayed. For the purpose of any layout-related information, such as querying for the computed value of the element’s width property, it must be treated as if it did not generate any boxes. Properties that rely on boxes but do not rely on layout, such as animations, counter-increment, etc., must work as normal on this element and its descendants. This needs more clarity about what &quot;layout-related&quot; and &quot;participates in layout&quot; means. Does the box still generate anonymous boxes, etc.? How does it affect speech? See proposal."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

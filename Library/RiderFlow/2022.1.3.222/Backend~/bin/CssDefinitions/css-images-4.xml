@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Image Values and Replaced Content Module Level 4
+W3C Working Draft, 13 April 2017
+https://www.w3.org/TR/2017/WD-css-images-4-20170413/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <named-value id="image" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-image">
+    <group type="or">
+      <invoke id="image"/>
+      <invoke id="image-set"/>
+      <invoke id="-webkit-image-set"/>
+      <invoke id="url"/>
+      <invoke id="element"/>
+      <!--https://developer.mozilla.org/en-US/docs/Web/CSS/element-->
+      <invoke id="-moz-element"/>
+      <!--https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-image-rect-->
+      <invoke id="-moz-image-rect"/>
+      <invoke id="cross-fade"/>
+      <inline id="gradient"/>
+    </group>
+  </named-value>
+
+  <named-value id="gradient" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-gradient">
+    <group type="or">
+      <invoke id="linear-gradient"/>
+      <invoke id="-webkit-linear-gradient"/>
+      <invoke id="-o-linear-gradient"/>
+      <invoke id="-moz-linear-gradient"/>
+      <invoke id="-ms-linear-gradient"/>
+      <invoke id="-webkit-gradient"/>
+      <invoke id="radial-gradient"/>
+      <invoke id="repeating-linear-gradient"/>
+      <invoke id="repeating-radial-gradient"/>
+      <invoke id="conic-gradient"/>
+      <invoke id="repeating-conic-gradient"/>
+    </group>
+  </named-value>
+
+  <named-value id="conic-gradient-parameters" declared-in="4.0">
+    <group>
+      <group type="or">
+        <group>
+          <name value="from"/>
+          <angle/>
+          <text value=","/>
+        </group>
+        <group min="0">
+          <group min="0">
+            <name value="from"/>
+            <angle/>
+          </group>
+          <name value="at"/>
+          <property id="background-position" name="position"/>
+          <text value=","/>
+        </group>
+      </group>
+
+      <inline id="angular-color-stop-list"/>
+    </group>
+  </named-value>
+
+  <named-value id="angular-color-stop-list" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-angular-color-stop-list">
+    <group>
+      <group max="-1" type="or">
+        <group>
+          <inline id="angular-color-stop"/>
+          <text value=","/>
+          <inline id="angular-color-hint"/>
+          <text value=","/>
+        </group>
+        <group>
+          <inline id="angular-color-stop"/>
+          <text value=","/>
+        </group>
+      </group>
+      <inline id="angular-color-stop"/>
+    </group>
+  </named-value>
+
+  <named-value id="angular-color-stop" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-angular-color-stop">
+    <group type="or">
+      <group>
+        <inline id="color"/>
+        <inline id="color-stop-angle"/>
+      </group>
+      <group>
+        <inline id="color-stop-angle"/>
+        <inline id="color"/>
+      </group>
+      <inline id="color"/>
+    </group>
+  </named-value>
+
+  <named-value id="angular-color-hint" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-angular-color-hint">
+    <group type="or">
+      <percentage/>
+      <angle/>
+    </group>
+  </named-value>
+
+  <named-value id="color-stop-angle" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#typedef-color-stop-angle">
+    <group type="or" max="2">
+      <percentage/>
+      <angle/>
+    </group>
+  </named-value>
+
+  <function id="conic-gradient" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#funcdef-conic-gradient">
+    <description><![CDATA[
+      <p>A conic gradient starts by specifying the center of a circle, similar to radial gradients, except that conic gradient color-stops
+        are placed around the circumference of the circle, rather than on a line emerging from the center, causing the color to smoothly
+        transition as you spin around the center, rather than as you progress outward from the center.</p>
+      <p>A conic gradient is specified by indicating the center of the gradient, and then specifying a list of color-stops. Unlike linear
+        and radial gradients, whose color-stops are placed by specifying a
+        &lt;length&gt;, the color-stops of a conic gradient are specified with an
+        &lt;angle&gt;. Rays are then drawn emerging from the center and pointing in all directions, with the color of each ray equal to the
+        color of the gradient-line where they intersect it.
+      </p>
+      ]]></description>
+    <inline id="conic-gradient-parameters"/>
+  </function>
+
+  <function id="repeating-conic-gradient" declared-in="4.0" url="https://www.w3.org/TR/css3-images/#repeating-gradients">
+    <description><![CDATA[
+      <p>In addition to &lt;linear-gradient&gt; &lt;radial-gradient&gt;, and &lt;conic-gradient&gt;, the specification defines
+        &lt;repeating-linear-gradient&gt;, &lt;repeating-radial-gradient&gt; and &lt;repeating-conic-gradient&gt; values.
+        These notations take the same values and are interpreted the same as their respective
+        non-repeating siblings.</p>
+      ]]></description>
+    <inline id="conic-gradient-parameters"/>
+  </function>
+
+  <function id="image-set" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#image-set-notation">
+    <group>
+      <group>
+        <group type="or">
+          <inline id="image"/>
+          <string/>
+        </group>
+        <resolution/>
+      </group>
+      <group min="0" max="-1">
+        <text value=","/>
+        <group>
+          <group type="or">
+            <inline id="image"/>
+            <string/>
+          </group>
+          <resolution/>
+        </group>
+      </group>
+      <!--fallback color-->
+      <group min="0">
+        <text value=","/>
+        <inline id="color"/>
+      </group>
+    </group>
+  </function>
+  <prefixed-function id="image-set" prefix="webkit" url="https://www.w3.org/TR/css-images-4/#image-set-notation"/>
+
+  <function id="element" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#funcdef-element">
+    <description><![CDATA[
+      <p>The element() function allows an author to use an element in the document as an image. As the referenced element changes appearance,
+       the image changes as well. This can be used, for example, to create live previews of the next/previous slide in a slideshow,
+       or to reference a canvas element for a fancy generated gradient or even an animated background.</p>
+      ]]></description>
+    <selector/>
+  </function>
+
+  <function id="-moz-element" declared-in="4.0" url="https://developer.mozilla.org/en-US/docs/Web/CSS/element" browsers="FF4.0">
+    <description><![CDATA[
+      <p>The <b>element()</b> CSS function defines an &lt;image&gt; value generated from an arbitrary HTML element.
+        This image is live, meaning that if the HTML element is changed, the CSS
+        properties using the resulting value are automatically updated.</p>
+
+      <p>A particularly useful scenario for using this would be to render an image in an HTML
+        &lt;canvas&gt; element, then use that as a background.</p>
+      ]]></description>
+    <selector/>
+  </function>
+
+  <function id="-moz-image-rect" declared-in="4.0" url="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-image-rect" browsers="FF4.0">
+    <description><![CDATA[
+      <p>This value for CSS background-image lets you use a portion of a larger image as a background. This allows you to, for example, use
+        different parts of one larger image as backgrounds in different parts of your content.</p>
+      <p>This works very similarly to the <see cref="P:-moz-image-region property"/>, which is used with the <see
+          cref="P:list-style-image"/> property to use parts of an
+        image as the bullets in lists. However, this can be used for any CSS background.</p>
+      <p>The syntax for the rectangle is similar to the <see cref="F:rect()"/> function generating a
+        &lt;shape&gt; CSS type. All four values are relative to the upper left corner of the image.
+      </p>
+      ]]></description>
+    <group>
+      <uri tooltip="The URI of the image from which to take the sub-image."/>
+      <text value=","/>
+      <group type="or" name="top" tooltip="The top edge, specified as a &lt;length&gt;, of the sub-image within the specified image.">
+        <length/>
+        <percentage/>
+      </group>
+      <text value=","/>
+      <group type="or" name="right" tooltip="The right edge, specified as a &lt;length&gt;, of the sub-image within the specified image.">
+        <length/>
+        <percentage/>
+      </group>
+      <text value=","/>
+      <group type="or" name="bottom" tooltip="The bottom edge, specified as a &lt;length&gt;, of the sub-image within the specified image.">
+        <length/>
+        <percentage/>
+      </group>
+      <text value=","/>
+      <group type="or" name="left" tooltip="The left edge, specified as a &lt;length&gt;, of the sub-image within the specified image.">
+        <length/>
+        <percentage/>
+      </group>
+    </group>
+  </function>
+
+  <function id="cross-fade" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#cross-fade-function">
+    <description><![CDATA[
+      When transitioning between images, CSS requires a way to explicitly refer to the intermediate image that is a combination of the start
+      and end images.
+      This is accomplished with the <b>cross-fade()</b> function, which indicates the two images to be combined and how far along in the
+      transition the combination is.
+      ]]></description>
+    <group>
+      <percentage min="0"/>
+      <inline id="image"/>
+      <group min="0">
+        <text value=","/>
+        <group type="or">
+          <inline id="image"/>
+          <inline id="color"/>
+        </group>
+      </group>
+    </group>
+  </function>
+
+  <function id="image" declared-in="4.0" url="https://www.w3.org/TR/css-images-4/#funcdef-image">
+    <description><![CDATA[
+      <p>The <b>image()</b> function allows an author to:</p>
+      <ul>
+        <li>use media fragments to clip out a portion of an image</li>
+        <li>use a solid color as an image</li>
+        <li>fallback to a solid-color image, when the image at the specified url can’t be downloaded or decoded</li>
+        <li>sautomatically respect the image orientation specified in the image’s metadata</li>
+      </ul>
+      ]]>
+    </description>
+    <group>
+      <group type="or" min="0">
+        <name value="ltr"/>
+        <name value="rtl"/>
+      </group>
+      <group min="0" max="-1">
+        <group type="or">
+          <uri/>
+          <string/>
+        </group>
+        <text value=","/>
+      </group>
+      <group type="or">
+        <uri/>
+        <string/>
+        <!--fallback color-->
+        <inline id="color"/>
+      </group>
+    </group>
+  </function>
+
+  <property id="image-rendering" declared-in="4.0" url="https://drafts.csswg.org/css-images-3/#propdef-image-rendering" initial="auto"
+            applies="all elements" inherited="yes" media="visual">
+    <description><![CDATA[
+      <p>The <b>image-rendering</b> property provides a hint to the user-agent about what aspects of an image are most important to preserve when
+       the image is scaled, to aid the user-agent in the choice of an appropriate scaling algorithm. When specified on an element, it applies
+       to all images given in properties for the element, such as background images, list-style images, or the content of replaced elements
+       when they represent an image that must be scaled.</p>
+      ]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <name value="smooth"/>
+      <name value="high-quality"/>
+      <name value="crisp-edges"/>
+      <name value="pixelated"/>
+      <name value="-moz-crisp-edges"/>
+      <name value="-o-crisp-edges"/>
+      <name value="-webkit-crisp-edges"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

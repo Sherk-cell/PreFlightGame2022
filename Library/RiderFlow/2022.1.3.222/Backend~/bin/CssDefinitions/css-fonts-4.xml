@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Fonts Module Level 4
+W3C Working Draft, 10 April 2018
+https://www.w3.org/TR/2018/WD-css-fonts-4-20180410/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+
+  <!--<property id="font"/> properly defined in css3-fonts.xml-->
+
+  <!--<property id="font-family"/> properly defined in css3-fonts.xml-->
+
+  <!--<property id="font-language-override"/> properly defined in css3-fonts.xml-->
+
+  <property id="font-max-size" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-max-size" applies="all elements"
+            initial="infinity" inherited="yes" percentage="refer to parent element’s font size" media="visual" animatable="yes">
+    <description><![CDATA[<p>font-max-size nad font-min-size allow a website or user to require an element’s font size to be clamped within the range supplied with these two properties. If the computed value
+ <see cref="P:font-size" /> is outside the bounds created by
+ <see cref="P:font-min-size" /> and font-max-size, the use value of
+ <see cref="P:font-size" /> is clamped to the values specified in these two properties.</p>]]></description>
+    <group type="or">
+      <inline id="absolute-size"/>
+      <inline id="relative-size"/>
+      <inline id="length-percentage"/>
+      <name value="infinity"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-min-size" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-min-size" applies="all elements"
+            initial="0" inherited="yes" percentage="refer to parent element’s font size" media="visual" animatable="yes">
+    <description><![CDATA[<p>font-max-size nad font-min-size allow a website or user to require an element’s font size to be clamped within the range supplied with these two properties. If the computed value
+ <see cref="P:font-size" /> is outside the bounds created by
+ <see cref="P:font-min-size" /> and font-max-size, the use value of
+ <see cref="P:font-size" /> is clamped to the values specified in these two properties.</p>]]></description>
+    <group type="or">
+      <inline id="absolute-size"/>
+      <inline id="relative-size"/>
+      <inline id="length-percentage"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-optical-sizing" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-optical-sizing"
+            applies="all elements" initial="auto" inherited="yes" percentage="n/a" media="visual" animatable="no">
+    <description>
+      <![CDATA[<p>Typographically, text rendered at different sizes often benefits from slightly different visual representations.
+      For example, to aid reading at small text sizes, strokes are often thicker with larger serifs. Larger text often has a more delicate
+       figure with more contrast between thicker and thinner strokes.</p>]]></description>
+    <group type="or">
+      <name value="auto"
+            tooltip="The user agent may modify the shape of glyphs based on the font-size and the pixel density of the screen. For OpenType and TrueType fonts using font variations, this is often done by using the &quot;opsz&quot; font variation."/>
+      <name value="none" tooltip="The user agent must not modify the shape of glyphs for optical size."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-palette" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-palette" applies="all elements"
+            initial="normal" inherited="yes" percentage="N/a" media="visual" animatable="yes">
+    <group type="or">
+      <name value="normal"
+            tooltip="User-Agents attempt to treat the color font as closely as possible to a non-color font. In particular, user-agents use a palette which will yield the best default result for reading. User-agents may take the computed value of the color property into consideration when making this decision. User agents may also construct and use a palette not defined in the font."/>
+      <name value="light"
+            tooltip="Some color font formats include metadata marking certain palettes as applicable on a light (close to white) background. This keyword causes the user-agent to use the first available palette in the font file marked this way. If the font file format does not account for this metadata, or no palette in the font is marked this way, this value behaves as normal."/>
+      <name value="dark"
+            tooltip="Some color font formats include metadata marking certain palettes as applicable on a dark (close to black) background. This keyword causes the user-agent to use the first available palette in the font file marked this way. If the font file format does not account for this metadata, or no palette in the font is marked this way, this value behaves as normal."/>
+      <any tooltip="palette identifier"/>
+    </group>
+  </property>
+
+  <!--<property id="font-size"/> properly defined in css3-fonts.xml -->
+
+  <!--<property id="font-size-adjust"/> properly defined in css3-fonts.xml-->
+
+  <property id="font-stretch" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-stretch" applies="all elements"
+            initial="normal" inherited="yes" media="visual" animatable="yes">
+    <description>
+      <![CDATA[<p>The font-stretch property selects a normal, condensed, or expanded face from a font family.</p>]]></description>
+    <group type="or">
+      <name value="normal"/>
+      <name value="ultra-condensed"/>
+      <name value="extra-condensed"/>
+      <name value="condensed"/>
+      <name value="semi-condensed"/>
+      <name value="semi-expanded"/>
+      <name value="expanded"/>
+      <name value="extra-expanded"/>
+      <name value="ultra-expanded"/>
+      <percentage/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-style" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-style" applies="all elements"
+            initial="normal" inherited="yes" percentage="n/a" media="visual" animatable="yes">
+    <description>
+      <![CDATA[<p>The font-style property allows italic or oblique faces to be selected. Italic forms are generally cursive in nature while
+      oblique faces are typically sloped versions of the regular face. Oblique faces can be simulated by artificially sloping the glyphs of
+      the regular face. </p>]]></description>
+    <group type="or">
+      <name value="normal"
+            tooltip="Matches against a face that is classified as a normal face, one that is neither italic or obliqued. This represents an oblique value of &quot;0&quot;."/>
+      <name value="italic" tooltip="Matches against a font that is labeled as an italic face, or an oblique face if one is not."/>
+      <group
+          tooltip="Controls matching against an oblique face. The lack of a number represents an angle of &quot;20deg&quot;. Values less than -90deg or values greater than 90deg are invalid and are treated as parse errors. (Note that a font might internally provide its own mapping for &quot;oblique&quot;, but that mapping within the font is disregarded). Matches against a font that is labeled as an oblique face, or an italic face if one is not.">
+        <name value="oblique"/>
+        <angle min="0"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-synthesis" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-synthesis" applies="all elements"
+            initial="weight style small-caps" inherited="yes" percentage="N/A" media="visual" animatable="no">
+    <description>
+      <![CDATA[<p>This property controls whether user agents are allowed to synthesize bold or oblique font faces when a font family lacks
+      bold or italic faces. If <span class="css">weight</span> is not specified, user agents must not synthesize bold faces. If style is not
+       specified, user agents must not synthesize italic faces. If <span class="css">small-caps</span> is not specified, user agents must
+        not synthesize small-caps faces nor all-small-caps faces. A value of <span class="css">none</span> disallows all synthetic faces.</p>]]></description>
+    <group type="or">
+      <name value="none"/>
+      <group type="any">
+        <name value="weight"/>
+        <name value="style"/>
+        <name value="small-caps"/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <!--<property id="font-variant-alternates"/> properly defined in css3-fonts.xml-->
+
+  <property id="font-variant-emoji" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-emoji"
+            applies="all elements" initial="auto" inherited="yes" percentage="N/a" media="visual" animatable="yes">
+    <description><![CDATA[<p class="issue" id="issue-1fe465a3"> Bikeshed the values.</p>]]></description>
+    <group type="or">
+      <name value="auto"
+            tooltip="User Agents can choose to draw a Presentation Participating Code Point in either emoji style or text style. User Agents may wish to follow the guidance of the Unicode Consortium when performing this decision. User agents also may wish to follow platform conventions when performing this decision."/>
+      <name value="text"
+            tooltip="Code points are rendered as if U+FE0E VARIATION SELECTOR-15 was appended to every Presentation Participating Code Point."/>
+      <name value="emoji"
+            tooltip="Code points are rendered as if U+FE0F VARIATION SELECTOR-16 was appended to every Presentation Participating Code Point."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="font-variation-settings" declared-in="4.0" url="https://www.w3.org/TR/css-fonts-4/#propdef-font-variation-settings"
+            applies="all elements" initial="normal" inherited="yes" percentage="n/a" media="visual" animatable="yes">
+    <description>
+      <![CDATA[<p>This property provides low-level control over OpenType or TrueType font variations. It is intended as a way of providing
+      access to font variations that are not widely used but are needed for a particular use case.</p>]]></description>
+    <group type="or">
+      <name value="normal"/>
+      <group comma-separated="yes">
+        <string/>
+        <number/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <!--<property id="font-weight"/> properly defined in css3-fonts.xml-->
+
+</definitions>

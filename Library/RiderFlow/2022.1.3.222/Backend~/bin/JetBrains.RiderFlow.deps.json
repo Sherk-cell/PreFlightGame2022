@@ -1,0 +1,912 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ClrStack/1": {
+        "runtimeTargets": {
+          "NetCore/ClrStack.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.5.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Annotations.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4242.42.42.42"
+          }
+        }
+      },
+      "JetBrains.Build.Platform.DistributedCache/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Build.Platform.DistributedCache.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Lifetimes/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Lifetimes.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Microsoft.Diagnostics.Runtime/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Microsoft.Diagnostics.Runtime.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.5.10501"
+          }
+        }
+      },
+      "JetBrains.NuGet.Commands/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Commands.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Common/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Common.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Configurations/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Configuration.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Credentials/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Credentials.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.DependencyResolver.Core/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.DependencyResolver.Core.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Frameworks/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Frameworks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.LibraryModel/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.LibraryModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.PackageManagement/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.PackageManagement.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Packaging/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Packaging.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.ProjectModel/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.ProjectModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Protocol/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Protocol.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Resolver/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Resolver.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Versioning/1": {
+        "runtimeTargets": {
+          "NetCore/NuGet.Versioning.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.32767"
+          }
+        }
+      },
+      "JetBrains.Profiler.Api/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Profiler.Api.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.2.0.0"
+          }
+        }
+      },
+      "JetBrains.Profiler.SelfApi/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.Profiler.SelfApi.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.3.0.0"
+          }
+        }
+      },
+      "JetBrains.RdFramework/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.RdFramework.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.RdFramework.Reflection/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.RdFramework.Reflection.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.ReSharper.TestRunner.Abstractions/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.ReSharper.TestRunner.Abstractions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.9.1.0"
+          }
+        }
+      },
+      "JetBrains.ReSharper.TestRunner.Adapters.MsTest.Tasks/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.ReSharper.TestRunner.Adapters.MsTest.Tasks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.9.1.10"
+          }
+        }
+      },
+      "JetBrains.ReSharper.TestRunner.Adapters.NUnit3.Tasks/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.ReSharper.TestRunner.Adapters.NUnit3.Tasks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.9.1.18"
+          }
+        }
+      },
+      "JetBrains.ReSharper.TestRunner.Adapters.VsTest.Tasks/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.ReSharper.TestRunner.Adapters.VsTest.Tasks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.9.1.1"
+          }
+        }
+      },
+      "JetBrains.ReSharper.TestRunner.Adapters.XUnit.Tasks/1": {
+        "runtimeTargets": {
+          "NetCore/JetBrains.ReSharper.TestRunner.Adapters.XUnit.Tasks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.9.1.8"
+          }
+        }
+      },
+      "JetBrains.System.Xaml/1": {
+        "runtimeTargets": {
+          "NetCore/System.Xaml.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          }
+        }
+      },
+      "JetBrains.WindowsDesktop.Mock.Runtime/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.VisualBasic.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/PresentationCore.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/PresentationFramework.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/System.Web.Services.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/System.Windows.Forms.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/System.Windows.Interactivity.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/WindowsBase.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          },
+          "NetCore/System.Design.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Diagnostics.NETCore.Client/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.Diagnostics.NETCore.Client.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "0.2.4.21401"
+          }
+        }
+      },
+      "Microsoft.DiaSymReader/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.DiaSymReader.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.4.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.Extensions.DependencyModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.Xdt/1": {
+        "runtimeTargets": {
+          "NetCore/Microsoft.Web.XmlTransform.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "3.0.0.34420"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1": {
+        "runtimeTargets": {
+          "NetCore/BouncyCastle.Crypto.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.9.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1": {
+        "runtimeTargets": {
+          "NetCore/SQLitePCLRaw.core.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.CodeDom/1": {
+        "runtimeTargets": {
+          "NetCore/System.CodeDom.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0"
+          }
+        }
+      },
+      "System.Collections.Immutable/1": {
+        "runtimeTargets": {
+          "NetCore/System.Collections.Immutable.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/1": {
+        "runtimeTargets": {
+          "NetCore/System.Configuration.ConfigurationManager.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0"
+          },
+          "NetCore/System.Diagnostics.EventLog.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0"
+          }
+        }
+      },
+      "System.Drawing.Common/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.2"
+          },
+          "NetCore/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.2"
+          },
+          "NetCore/System.Drawing.Common.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.2"
+          }
+        }
+      },
+      "System.IO.FileSystem.AccessControl/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.IO.FileSystem.AccessControl.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.IO.Ports/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/linux/lib/netstandard2.0/System.IO.Ports.dll": {
+            "rid": "linux",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/runtimes/osx/lib/netstandard2.0/System.IO.Ports.dll": {
+            "rid": "osx",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/runtimes/win/lib/netstandard2.0/System.IO.Ports.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.IO.Ports.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Reflection.Metadata/1": {
+        "runtimeTargets": {
+          "NetCore/System.Reflection.Metadata.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/1": {
+        "runtimeTargets": {
+          "NetCore/System.Runtime.CompilerServices.Unsafe.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.4.1"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.RuntimeInformation/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          },
+          "NetCore/runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          },
+          "NetCore/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          }
+        }
+      },
+      "System.Security.AccessControl/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.Security.AccessControl.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Security.Permissions/1": {
+        "runtimeTargets": {
+          "NetCore/System.Security.Permissions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.Security.Principal.Windows.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.ServiceProcess.ServiceController/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.2.3.0"
+          },
+          "NetCore/System.ServiceProcess.ServiceController.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.2.3.0"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0"
+          },
+          "NetCore/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0"
+          }
+        }
+      },
+      "System.Threading.AccessControl/1": {
+        "runtimeTargets": {
+          "NetCore/runtimes/win/lib/netstandard2.0/System.Threading.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "NetCore/System.Threading.AccessControl.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "xunit.abstractions/1": {
+        "runtimeTargets": {
+          "NetCore/xunit.abstractions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.runner.utility/1": {
+        "runtimeTargets": {
+          "NetCore/xunit.runner.utility.netcoreapp10.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.4.1.0"
+          }
+        }
+      },
+      "YamlDotNet.Signed/1": {
+        "runtimeTargets": {
+          "NetCore/YamlDotNet.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClrStack/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Annotations/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Build.Platform.DistributedCache/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Lifetimes/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Microsoft.Diagnostics.Runtime/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Commands/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Common/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Configurations/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Credentials/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.DependencyResolver.Core/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Frameworks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.LibraryModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.PackageManagement/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Packaging/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.ProjectModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Protocol/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Resolver/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Versioning/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Profiler.Api/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Profiler.SelfApi/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.RdFramework/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.RdFramework.Reflection/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.ReSharper.TestRunner.Abstractions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.ReSharper.TestRunner.Adapters.MsTest.Tasks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.ReSharper.TestRunner.Adapters.NUnit3.Tasks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.ReSharper.TestRunner.Adapters.VsTest.Tasks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.ReSharper.TestRunner.Adapters.XUnit.Tasks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.System.Xaml/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.WindowsDesktop.Mock.Runtime/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Diagnostics.NETCore.Client/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.DiaSymReader/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Web.Xdt/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Portable.BouncyCastle/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "SQLitePCLRaw.core/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.CodeDom/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Collections.Immutable/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Configuration.ConfigurationManager/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Diagnostics.EventLog/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Drawing.Common/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.IO.FileSystem.AccessControl/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.IO.Ports/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Reflection.Metadata/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Runtime.CompilerServices.Unsafe/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Runtime.InteropServices.RuntimeInformation/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.AccessControl/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Cryptography.ProtectedData/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Permissions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Principal.Windows/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.ServiceProcess.ServiceController/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Text.Encoding.CodePages/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Threading.AccessControl/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "xunit.abstractions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "xunit.runner.utility/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "YamlDotNet.Signed/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    }
+  }
+}

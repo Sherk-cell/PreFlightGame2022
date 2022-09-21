@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Scroll Snap Module Level 1
+W3C Candidate Recommendation, 31 January 2019
+https://www.w3.org/TR/2019/CR-css-scroll-snap-1-20190131/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="scroll-margin" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>This property is a shorthand property that sets all of the scroll-margin-* longhands in one declaration, assigning values to the longhands representing each side exactly as the
+ <see cref="P:margin" /> property does for its longhands.</p>]]></description>
+    <group type="or">
+      <length max="4"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-block" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-block" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These shorthands of
+ <see cref="P:scroll-margin-block-start" /> +
+ <see cref="P:scroll-margin-block-end" /> and
+ <see cref="P:scroll-margin-inline-start" /> +
+ <see cref="P:scroll-margin-inline-end" /> are longhands of
+ <see cref="P:scroll-margin" />, and specify the block-axis and inline-axis edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-block-end" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-block-end" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-block-start" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-block-start" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-bottom" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-bottom" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-inline" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-inline" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These shorthands of
+ <see cref="P:scroll-margin-block-start" /> +
+ <see cref="P:scroll-margin-block-end" /> and
+ <see cref="P:scroll-margin-inline-start" /> +
+ <see cref="P:scroll-margin-inline-end" /> are longhands of
+ <see cref="P:scroll-margin" />, and specify the block-axis and inline-axis edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length max="2"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-inline-end" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-inline-end" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-inline-start" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-inline-start" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-left" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-left" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-right" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-right" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-margin-top" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-margin-top" applies="all elements" initial="0" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-margin" /> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>]]></description>
+    <group type="or">
+      <length/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the corresponding dimension of the scroll container’s scrollport">
+    <description><![CDATA[<p>This property specifies offsets that define the <strong>optimal viewing region</strong> of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.</p>]]></description>
+    <group type="or">
+      <group type="or" max="4">
+        <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+        <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-block" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block" applies="all elements" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These shorthands of
+ <see cref="P:scroll-padding-block-start" /> +
+ <see cref="P:scroll-padding-block-end" /> and
+ <see cref="P:scroll-padding-inline-start" /> +
+ <see cref="P:scroll-padding-inline-end" /> are longhands of
+ <see cref="P:scroll-padding" />, and specify the block-axis and inline-axis edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+        <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-block-end" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block-end" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+      <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-block-start" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block-start" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+      <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-bottom" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-bottom" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the top, right, bottom, and left edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <inline id="length-percentage"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-inline" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline" applies="all elements" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These shorthands of
+ <see cref="P:scroll-padding-block-start" /> +
+ <see cref="P:scroll-padding-block-end" /> and
+ <see cref="P:scroll-padding-inline-start" /> +
+ <see cref="P:scroll-padding-inline-end" /> are longhands of
+ <see cref="P:scroll-padding" />, and specify the block-axis and inline-axis edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+        <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-inline-end" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline-end" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+      <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-inline-start" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline-start" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto" tooltip="Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content."/>
+      <inline id="length-percentage" tooltip="Defines an inward offset from the corresponding edge of the scrollport."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-left" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-left" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the top, right, bottom, and left edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <inline id="length-percentage"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-right" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-right" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the top, right, bottom, and left edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <inline id="length-percentage"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-padding-top" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-top" applies="scroll containers" initial="auto" inherited="no" percentage="relative to the scroll container’s scrollport">
+    <description><![CDATA[<p>These longhands of
+ <see cref="P:scroll-padding" /> specify the top, right, bottom, and left edges of the snapport, respectively.</p>]]></description>
+    <group type="or">
+      <name value="auto"/>
+      <inline id="length-percentage"/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-snap-align" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-align" applies="all elements" initial="none" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>The scroll-snap-align property specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.</p>]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="none" tooltip="This box does not define a snap position in the specified axis."/>
+        <name value="start" tooltip="Start alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis."/>
+        <name value="end" tooltip="End alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis."/>
+        <name value="center" tooltip="Center alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis."/>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-snap-stop" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-stop" applies="all elements" initial="normal" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>When scrolling with an intended direction, the scroll container can “pass over” several possible snap positions (that would be valid to snap to, if the scrolling operation used the same direction but a lesser distance) before reaching the natural endpoint of the scroll operation and selecting its final scroll position. The scroll-snap-stop property allows such a possible <span id="ref-for-scroll-snap-position③⑦">snap position</span> to “trap” the scrolling operation, forcing the <span id="ref-for-scroll-container③④">scroll container</span> to stop before the scrolling operation would naturally end.</p>]]></description>
+    <group type="or">
+      <name value="normal" tooltip="The scroll container may pass over a snap position defined by this element during the execution of a scrolling operation."/>
+      <name value="always" tooltip="The scroll container must not pass over a snap position defined by this element during the execution of a scrolling operation; it must instead snap to the first of this element’s snap positions."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <property id="scroll-snap-type" declared-in="0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-type" applies="all elements" initial="none" inherited="no" percentage="n/a">
+    <description><![CDATA[<p>The scroll-snap-type property specifies whether a scroll container is a scroll snap container, how strictly it snaps, and which axes are considered. If no strictness value is specified, proximity is assumed.</p>]]></description>
+    <group type="or">
+      <name value="none" tooltip="If specified on a scroll container, the scroll container must not snap."/>
+      <group>
+        <group type="or">
+          <name value="x" tooltip="The scroll container snaps to snap positions in its horizontal axis only."/>
+          <name value="y" tooltip="The scroll container snaps to snap positions in its vertical axis only."/>
+          <name value="block" tooltip="The scroll container snaps to snap positions in its block axis only."/>
+          <name value="inline" tooltip="The scroll container snaps to snap positions in its inline axis only."/>
+          <name value="both" tooltip="The scroll container snaps to snap positions in both of its axes independently (potentially snapping to different elements in each axis)."/>
+        </group>
+        <group type="or" min="0">
+          <name value="mandatory" tooltip="If specified on a scroll container, the scroll container is required to be snapped to a snap position when there are no active scrolling operations. If a valid snap position exists then the scroll container must snap at the termination of a scroll (if none exist then no snapping occurs)."/>
+          <name value="proximity" tooltip="If specified on a scroll container, the scroll container may snap to a snap position at the termination of a scroll, at the discretion of the UA given the parameters of the scroll."/>
+        </group>
+      </group>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+
+  <prefixed-property id="scroll-snap-type" prefix="webkit" browsers="S9.0"
+                     url="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html#//apple_ref/doc/uid/TP40014305-CH9-SW28"/>
+
+</definitions>

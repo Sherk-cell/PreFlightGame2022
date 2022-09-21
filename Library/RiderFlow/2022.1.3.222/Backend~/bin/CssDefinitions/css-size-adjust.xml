@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="text-size-adjust" declared-in="0" url="https://drafts.csswg.org/css-size-adjust/#propdef-text-size-adjust"
+            applies="all elements" initial="auto" inherited="yes" percentage="see below" media="visual">
+    <description><![CDATA[
+      <p>Specifies a size adjustment for displaying text content on smartphones.</p>
+      ]]></description>
+    <group type="or">
+      <name value="none"
+            tooltip="Renderers must not do size adjustment when displaying on a small device."/>
+      <name value="auto"
+            tooltip="Renderers must use the default size adjustment when displaying on a small device."/>
+      <percentage
+          tooltip="When displaying on a small device, renderers must not do size adjustment but instead the computed value of font-size must be multiplied by this percentage."/>
+      <inline id="wide-keywords" inline="yes"/>
+    </group>
+  </property>
+</definitions>

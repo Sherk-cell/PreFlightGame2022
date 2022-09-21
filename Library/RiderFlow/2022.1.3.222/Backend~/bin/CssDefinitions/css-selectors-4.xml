@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Selectors Level 4
+Editor’s Draft, 30 October 2017
+https://drafts.csswg.org/selectors
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <pseudo-class id="dir" declared-in="4.0" url="https://drafts.csswg.org/selectors-4/#the-dir-pseudo" browsers="FF49" >
+    <description><![CDATA[
+      <p>The <b>:dir()</b> pseudo-class allows the author to write selectors that represent an element based on its directionality as determined by the document language.</p>
+      ]]></description>
+    <group type="or">
+      <text value="ltr"/>
+      <text value="rtl"/>
+    </group>
+  </pseudo-class>
+
+  <pseudo-class id="focus-within" declared-in="4.0" url="https://drafts.csswg.org/selectors-4/#the-focus-within-pseudo">
+    <description><![CDATA[
+      <p>The <b>:focus-within</b> pseudo-class applies to elements for which the :focus pseudo class applies.</p>
+      ]]></description>
+  </pseudo-class>
+
+  <pseudo-class id="any-link" declared-in="4.0" url="https://drafts.csswg.org/selectors/#any-link-pseudo">
+    <description><![CDATA[
+      <p>The <b>:any-link</b> pseudo-class represents an element that acts as the source anchor of a hyperlink.
+        For example, in HTML5, any &lt;a&gt;, &lt;area&gt;, or &lt;link&gt; elements with an href attribute are hyperlinks, and thus match
+        :any-link.
+        It matches an element if the element would match :link or :visited, equivalent to :matches(:link, :visited).</p>
+      ]]></description>
+  </pseudo-class>
+
+  <pseudo-class id="matches" declared-in="4.0" browsers="S9.2" url="https://drafts.csswg.org/selectors/#matches">
+    <description><![CDATA[
+      <p>The matches-any pseudo-class, <b>:matches()</b>, is a functional pseudo-class taking a selector list as its argument.
+        It represents an element that is represented by its argument.</p>
+      ]]></description>
+    <selector comma-separated="yes"/>
+  </pseudo-class>
+
+  <pseudo-class id="placeholder-shown" browsers="C47,S9.0,FF51" declared-in="4.0"
+                url="https://drafts.csswg.org/selectors-4/#placeholder-shown-pseudo"
+                tooltip="represents any form element displaying placeholder text.">
+    <description><![CDATA[
+      Input elements can sometimes show placeholder text as a hint to the user on what to type in. See, for example, the placeholder attribute in [HTML5]. The :placeholder-shown pseudo-class matches an input element that is showing such placeholder text.
+      ]]></description>
+  </pseudo-class>
+
+  <pseudo-element id="placeholder" browsers="FF51" declared-in="4.0"
+                  url="https://drafts.csswg.org/css-pseudo-4/#placeholder-pseudo"
+                  tooltip="represents any form element displaying placeholder text.">
+    <description><![CDATA[
+      <p>The ::placeholder pseudo-element represents placeholder text in an input field: text that represents the input and provides a hint to the user on how to fill out the form. For example, a date-input field might have the placeholder text “YYYY/MM/DD” to clarify that numeric dates are to be entered in year-month-day order.</p>
+      <p>All properties that apply to the ::first-line pseudo-element also apply to the ::placeholder pseudo-element.</p>
+      ]]></description>
+  </pseudo-element>
+
+  <pseudo-class id="something" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#something-pseudo">
+    <description><![CDATA[The Specificity-adjustment pseudo-class, :something(), is a functional pseudo-class with the same syntax and functionality as :matches().
+    Unlike :matches(), neither the :something pseudo-class, nor any of its arguments contribute to the specificity of the selector—its specificity is always zero.]]></description>
+    <selector/>
+  </pseudo-class>
+  <pseudo-class id="has" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#has-pseudo">
+    <description><![CDATA[The relational pseudo-class, :has(), is a functional pseudo-class taking a relative selector list as an argument.
+    It represents an element if any of the relative selectors, when absolutized and evaluated with the element as the :scope elements, would match at least one element.]]></description>
+    <selector/>
+  </pseudo-class>
+  <pseudo-class id="local-link" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#local-link-pseudo">
+    <description><![CDATA[The :local-link pseudo-class allows authors to style hyperlinks based on the users current location within a site.
+    It represents an element that is the source anchor of a hyperlink whose target’s absolute URL matches the element’s own document URL.]]></description>
+  </pseudo-class>
+  <pseudo-class id="target-within" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-target-within-pseudo">
+    <description><![CDATA[The :target-within pseudo-class applies to elements for which the :target pseudo class applies as well as to an
+    element whose descendant in the flat tree (including non-element nodes, such as text nodes) matches the conditions for matching :target-within.]]></description>
+  </pseudo-class>
+  <pseudo-class id="scope" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-scope-pseudo">
+    <description><![CDATA[The :scope pseudo-class represents any element that is a :scope element. If the :scope elements are not explicitly specified,
+    but the selector is scoped and the scoping root is an element, then :scope represents the scoping root; otherwise, it represents the root of the document (equivalent to :root).]]></description>
+  </pseudo-class>
+  <pseudo-class id="focus-visible" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-focus-visible-pseudo">
+    <description><![CDATA[The :focus-visible pseudo-class applies while an element matches the :focus pseudo-class and the UA determines via heuristics that the focus should be made evident on the element.]]></description>
+  </pseudo-class>
+  <pseudo-class id="drop" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#has-pseudo">
+    <description><![CDATA[The relational pseudo-class, :has(), is a functional pseudo-class taking a relative selector list as an argument.
+    It represents an element if any of the relative selectors, when absolutized and evaluated with the element as the :scope elements, would match at least one element.]]></description>
+    <group type="or">
+      <text value="active"/>
+      <text value="valid"/>
+      <text value="invalid"/>
+    </group>
+  </pseudo-class>
+  <pseudo-class id="current" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-current-pseudo">
+    <description><![CDATA[The :current pseudo-class represents the element, or an ancestor of the element, that is currently being displayed.]]></description>
+  </pseudo-class>
+  <pseudo-class id="playing" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#selectordef-playing">
+    <description><![CDATA[The :playing pseudo-class represents an element representing an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is “playing”.]]></description>
+  </pseudo-class>
+  <pseudo-class id="paused" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#selectordef-paused">
+    <description><![CDATA[The :paused pseudo-class represents an element representing an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is not “playing”.]]></description>
+  </pseudo-class>
+  <pseudo-class id="user-invalid" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#user-invalid-pseudo">
+    <description><![CDATA[The :user-invalid pseudo-class represents an element with incorrect input, but only after the user has significantly interacted with it.]]></description>
+  </pseudo-class>
+  <pseudo-class id="blank" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-blank-pseudo">
+    <description><![CDATA[The :blank pseudo-class is like the :empty pseudo-class, except that it additionally matches elements that only contain code points affected by whitespace processing.]]></description>
+  </pseudo-class>
+  <pseudo-class id="nth-col" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-nth-col-pseudo">
+    <description><![CDATA[The :nth-col(An+B) pseudo-class notation represents a cell element belonging to a column that has An+B-1 columns before it, for any positive integer or zero value of n.]]></description>
+    <inline id="AnPlusB" name="An+B" />
+  </pseudo-class>
+  <pseudo-class id="nth-last-col" declared-in="4.0" url="https://www.w3.org/TR/selectors-4/#the-nth-last-col-pseudo">
+    <description><![CDATA[The :nth-last-col(An+B) pseudo-class notation represents a cell element belonging to a column that has An+B-1 columns after it, for any positive integer or zero value of n.]]></description>
+    <inline id="AnPlusB" name="An+B" />
+  </pseudo-class>
+  <pseudo-class id="nth-column" declared-in="4.0" url="https://www.w3.org/TR/selectors4/#nth-column-pseudo">
+    <inline id="AnPlusB" name="An+B" />
+  </pseudo-class>
+  <pseudo-class id="nth-last-column" declared-in="4.0" url="https://www.w3.org/TR/selectors4/#nth-last-column-pseudo">
+    <inline id="AnPlusB" name="An+B" />
+  </pseudo-class>
+
+</definitions>
