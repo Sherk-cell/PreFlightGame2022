@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class throwing : MonoBehaviour
+public class Throwing : MonoBehaviour
 {[Header("References")]
     public Transform cam;
     public Transform attackPoint;

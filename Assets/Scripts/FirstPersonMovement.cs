@@ -148,7 +148,7 @@ public class FirstPersonMovement : MonoBehaviour
         {
             state = MovementState.freeze;
             moveSpeed = 0;
-            rb.velocity = Vector3.zero;
+            //rb.velocity = Vector3.zero;
         }
         //mode - wallRunning
         else if (wallrunning)
@@ -245,6 +245,7 @@ public class FirstPersonMovement : MonoBehaviour
         // caculate movement direction
         moveDirection = orientation.forward * VerticalInput + orientation.right * HorizontalInput;
 
+       
         // on slope
         if (OnSlope() && !exitingSlope)
         {
@@ -350,7 +351,7 @@ public class FirstPersonMovement : MonoBehaviour
             enableMovemntOnNextTouch = false;
             ResetRestrictions();
 
-            GetComponent<Grapeling>().StopGrapple();
+            GetComponent<Grappling>().StopGrapple();
 
         }
     }

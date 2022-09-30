@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recentFilesPaths:
   - Assets/Scripts/Swining.cs
+  - Assets/Scripts/Sliding.cs
+  - Assets/Scripts/New Folder/PlayerMovementAdvanced.cs
+  - Assets/Scripts/Grapeling.cs
+  - Assets/Scripts/throwing.cs
+  - Assets/Scripts/New Folder/WallRunningAdvanced.cs
