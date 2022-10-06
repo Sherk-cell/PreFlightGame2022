@@ -53,20 +53,22 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\New Folder\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\Movement\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Movement\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Sliding.cs" />
     <Compile Include="Assets\Scripts\GrenadeThrow.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Throwing.cs" />
-    <Compile Include="Assets\Scripts\New Folder\IsusingCharControl.cs" />
+    <Compile Include="Assets\Scripts\Movement\IsusingCharControl.cs" />
     <Compile Include="Assets\Scripts\Swinging.cs" />
+    <Compile Include="Assets\Scripts\Movement\WallRunningAdvanced.cs" />
     <Compile Include="Assets\Scripts\FirstPerson.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\New Folder\PlayerMovementAdvanced.cs" />
+    <Compile Include="Assets\Scripts\Movement\PlayerMovementAdvanced.cs" />
     <Compile Include="Assets\Scripts\FirstPersonMovement.cs" />
-    <Compile Include="Assets\Scripts\New Folder\MoveCamera.cs" />
-    <Compile Include="Assets\Scripts\New Folder\WallRunningAdvanced.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\PauzeGame.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\ButtonFunction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
