@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637989104768974257
-    m_Hash: 2069909006
+      ticks: 638009903025423425
+    m_Hash: 2460948980
   m_LockFileStatus:
     m_FilePath: C:/Users/mrbos/Downloads/PreFlightGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637989105645768352
-    m_Hash: 2930234579
+      ticks: 638009903025587015
+    m_Hash: 1654340610
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3351,6 +3351,8 @@ m_PackageAssets:
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.2
+        - 3.0.1
+        - 3.0.2
         compatible:
         - 1.0.0-preview.2
         - 1.0.0-preview.3
@@ -3363,6 +3365,8 @@ m_PackageAssets:
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.2
+        - 3.0.1
+        - 3.0.2
         verified: 2.0.2
       dependencies: []
       resolvedDependencies: []
@@ -3417,6 +3421,15 @@ m_PackageAssets:
         - 1.1.0-pre.9
         - 1.1.0-pre.10
         - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
+        - 1.3.1
+        - 1.3.2
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3424,6 +3437,15 @@ m_PackageAssets:
         - 1.1.0-pre.9
         - 1.1.0-pre.10
         - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
+        - 1.3.1
+        - 1.3.2
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest

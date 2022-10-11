@@ -58,8 +58,10 @@
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Sliding.cs" />
     <Compile Include="Assets\Scripts\GrenadeThrow.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\PauzeGame.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Scripts\Throwing.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\ButtonFunction.cs" />
+    <Compile Include="Assets\Scripts\throwing.cs" />
     <Compile Include="Assets\Scripts\Movement\IsusingCharControl.cs" />
     <Compile Include="Assets\Scripts\Swinging.cs" />
     <Compile Include="Assets\Scripts\Movement\WallRunningAdvanced.cs" />
@@ -67,8 +69,6 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovementAdvanced.cs" />
     <Compile Include="Assets\Scripts\FirstPersonMovement.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\PauzeGame.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\ButtonFunction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
