@@ -482,7 +482,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
         CharacterController.Move(hookshotdir * Hookspeed * hookshotMultiplier * Time.deltaTime);
         float reachedhookshotposdis = 1f;
-            rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 3.5f * Time.deltaTime, ForceMode.Impulse);
+            rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 2.5f * Time.deltaTime, ForceMode.Impulse);
         if(Vector3.Distance(transform.position, hookshotPos) < reachedhookshotposdis)
         {
             Hookshottransform.gameObject.SetActive(false);

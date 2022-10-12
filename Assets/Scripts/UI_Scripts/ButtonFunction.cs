@@ -11,7 +11,7 @@ public class ButtonFunction : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             mainmenu.SetActive(true);
         }
@@ -30,6 +30,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void Go2Settings()
     {
+        Debug.Log("SSSSSSSSSSSS");
         mainmenu.SetActive(false);
         settings.SetActive(true);
     }
@@ -49,5 +50,6 @@ public class ButtonFunction : MonoBehaviour
         Time.timeScale = 1f;
         canvas.SetActive(false);
         Debug.Log("Doethet");
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

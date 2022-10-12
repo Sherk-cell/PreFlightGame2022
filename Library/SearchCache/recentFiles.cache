@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recentFilesPaths:
-  - Assets/Scripts/throwing.cs
-  - Assets/Scripts/New Folder/WallRunningAdvanced.cs
-  - Assets/Scenes/SampleScene.unity
-  - Assets/Scenes/Map.unity
-  - Assets/Scripts/New Folder/PlayerMovementAdvanced.cs
-  - Assets/Scenes/Pauzescreen.unity
-  - Assets/Scripts/UI_Scripts/ButtonFunction.cs
-  - Assets/Scripts/UI_Scripts/PauzeGame.cs
-  - Assets/Animations/Cube (1).controller
   - Assets/Animations/Simple move.anim
+  - Assets/Scripts/UI_Scripts/ButtonFunction.cs
+  - Assets/Animations voor testdingen/Cube (1).controller
+  - Assets/Animations voor testdingen/Effect.controller
+  - Assets/Scripts/UI_Scripts/PauzeGame.cs
+  - Assets/Scripts/Movement/PlayerMovementAdvanced.cs
+  - Assets/Animations voor testdingen/Breath effect.anim
+  - Assets/Scenes/Pauzescreen.unity
+  - Assets/Scenes/Map.unity
+  - Assets/Animations voor testdingen/RawImage.controller
