@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recentFilesPaths:
-  - Assets/Animations/Simple move.anim
-  - Assets/Scripts/UI_Scripts/ButtonFunction.cs
-  - Assets/Animations voor testdingen/Cube (1).controller
-  - Assets/Animations voor testdingen/Effect.controller
-  - Assets/Scripts/UI_Scripts/PauzeGame.cs
-  - Assets/Scripts/Movement/PlayerMovementAdvanced.cs
-  - Assets/Animations voor testdingen/Breath effect.anim
+  - Assets/Animations voor testdingen/Lazerbelow.anim
+  - Assets/Animations voor testdingen/Lazer 1.controller
+  - Assets/Animations voor testdingen/Lazer.controller
+  - Assets/Animations voor testdingen/Lazer.anim
+  - Assets/Scripts/Movement/PlayerCam.cs
+  - Assets/Scripts/Movement/Airdash.cs
+  - Assets/Scenes/Betere map.unity
   - Assets/Scenes/Pauzescreen.unity
   - Assets/Scenes/Map.unity
-  - Assets/Animations voor testdingen/RawImage.controller
+  - Assets/Scenes/Test.unity
