@@ -36,7 +36,7 @@ Wall Running:
 | ------ |  ------ |
 | Link naar online product backlog (Trello) | [Backlog]
 
-[Backlog]: https://trello.com/b/7ffx5uep/taak-verdeling
+[Backlog]: [https://trello.com/b/7ffx5uep/taak-verdeling](https://trello.com/b/MrO9H3Zh/game)
 
 
 
