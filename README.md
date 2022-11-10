@@ -24,7 +24,8 @@ Deze opties zijn het ziplining en wall running.
 
 Ziplining:
 
-
+stateDiagram-v2
+  [*] --> GrappableObjectTargeted  : Player Camera in front of a Grappable Object
 
 Wall Running:
 [INCLUDE MERMAID MARKDOWN HERE]
