@@ -24,7 +24,7 @@ Deze opties zijn het ziplining en wall running.
 
 Ziplining:
 
-![image](https://user-images.githubusercontent.com/61696738/201311716-a7eb3dc9-ff05-49bf-ba1e-28833e9f6114.png)
+![image](https://user-images.githubusercontent.com/61696738/201311900-78b37fe9-0f9b-4ea7-93c3-b70d61e843cd.png)
 
 
 Wall Running:
