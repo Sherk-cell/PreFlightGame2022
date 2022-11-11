@@ -24,7 +24,7 @@ Deze opties zijn het ziplining en wall running.
 
 Ziplining:
 
-!Grapple[mermaid-diagram-2022-11-11-105155](https://user-images.githubusercontent.com/61696738/201315168-f05a48da-2a83-4b24-bfe6-0807660da407.png)
+![mermaid-diagram-2022-11-11-105155](https://user-images.githubusercontent.com/61696738/201315168-f05a48da-2a83-4b24-bfe6-0807660da407.png)
 
 
 
