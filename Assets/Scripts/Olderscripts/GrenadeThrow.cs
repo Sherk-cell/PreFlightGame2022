@@ -27,7 +27,10 @@ public class GrenadeThrow : MonoBehaviour
     {
         // make sure only to stick to the first target you hit
         if (targetHit)
+        {
             return;
+        }
+
         else
             targetHit = true;
 
@@ -86,8 +89,22 @@ public class GrenadeThrow : MonoBehaviour
 
                     // apply force to object in range
                     objectsInRange[i].GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * explosionForce + Vector3.up * explosionForce, transform.position + new Vector3(0, -0.5f, 0), ForceMode.Impulse);
+                    if(objectsInRange[i].gameObject.tag == "Player")
+                    {
+                        PlayerHealth playerHP = objectsInRange[i].transform.GetComponent<PlayerHealth>();
 
+                        if(playerHP != null)
+                        {
+                            Debug.Log("Hitted Player");
+                            playerHP.TakeDmg(1);
+                        }
+                        
+                        
+                    }
                     Debug.Log("Kabooom " + objectsInRange[i].name);
+
+
+
                 }
             }
         }

@@ -53,24 +53,32 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Movement\NormalMovement\NormalMovement.cs" />
+    <Compile Include="Assets\Scripts\Movement\Airdash.cs" />
     <Compile Include="Assets\Scripts\Movement\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerCam.cs" />
-    <Compile Include="Assets\Scripts\Grappling.cs" />
-    <Compile Include="Assets\Scripts\Sliding.cs" />
-    <Compile Include="Assets\Scripts\Lazer.cs" />
-    <Compile Include="Assets\Scripts\GrenadeThrow.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\Grappling.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\Sliding.cs" />
+    <Compile Include="Assets\Scripts\Damagescripts\Lazer.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\GrenadeThrow.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\PauzeGame.cs" />
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Tutorial scripts\Tutorial2.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\ButtonFunction.cs" />
-    <Compile Include="Assets\Scripts\throwing.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\throwing.cs" />
     <Compile Include="Assets\Scripts\Movement\IsusingCharControl.cs" />
-    <Compile Include="Assets\Scripts\Swinging.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\Swinging.cs" />
     <Compile Include="Assets\Scripts\Movement\WallRunningAdvanced.cs" />
-    <Compile Include="Assets\Scripts\FirstPerson.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\ObjGrab.cs" />
+    <Compile Include="Assets\Scripts\Tutorial scripts\Tutorial.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\FirstPerson.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovementAdvanced.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonMovement.cs" />
-    <Compile Include="Assets\Scripts\Movement\Airdash.cs" />
+    <Compile Include="Assets\Scripts\Olderscripts\FirstPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\Introscreen.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

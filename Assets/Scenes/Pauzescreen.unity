@@ -1225,7 +1225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &820713024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1492,7 +1492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &997515361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2542,7 +2542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1773465974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2635,6 +2635,7 @@ MonoBehaviour:
   maintab: {fileID: 864698978}
   settingstab: {fileID: 747699738}
   toggler: 0
+  Crosshair: {fileID: 0}
 --- !u!114 &1773465979
 MonoBehaviour:
   m_ObjectHideFlags: 0

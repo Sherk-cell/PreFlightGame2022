@@ -25,6 +25,8 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public float slideSpeed;
     public float wallrunSpeed;
 
+    public Vector3 characterVelocity;
+
     public float speedIncreaseMultiplier;
     public float slopeIncreaseMultiplier;
 
@@ -49,7 +51,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -173,7 +175,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
         float MoveX = Input.GetAxisRaw("Horizontal");
         float MoveZ = Input.GetAxisRaw("Vertical");
         float speeds = 20f;
-        Vector3 characterVelocity = transform.right * MoveX * MoveX * speeds + transform.forward * MoveZ * speeds;
+        characterVelocity = transform.right * MoveX * MoveX * speeds + transform.forward * MoveZ * speeds;
 
 
 
@@ -415,27 +417,20 @@ public class PlayerMovementAdvanced : MonoBehaviour
         {
             IsusingCharController = true;
             RaycastHit raycastHit;
-            if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out raycastHit, shotrng))
+            if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out raycastHit, shotrng)) //Hier geef ik aan dat hij alles moet pakken wat voor de camera is en binnen de range
             {
+                           
 
-
-
-                if (raycastHit.transform.gameObject.tag == "Player")
+                if (raycastHit.transform.gameObject.tag == "GrappableObject") //Hier kijkt het als het de tag Grappable heeft
                 {
-                    Debug.Log("REeh");
+                    Debug.Log(raycastHit.transform.name);// Leuke debug om te zien wat het heeft geraakt
+                    Debughitpoint.position = raycastHit.point; // Hier plaats het een object op de punt van impact.
+                    hookshotPos = raycastHit.point; //Hier geeft de punt van impact als een value  het zonder de visueel
 
-                }
-
-                if (raycastHit.transform.gameObject.tag == "GrappableObject")
-                {
-                    Debug.Log(raycastHit.transform.name);
-                    Debughitpoint.position = raycastHit.point;
-                    hookshotPos = raycastHit.point;
-
-                    Hookshottransform.gameObject.SetActive(true);
-                    Hookshottransform.localScale = Vector3.zero;
-                    hookshotsize = 0f;
-                    Stats = States.hookshotthrown;
+                    Hookshottransform.gameObject.SetActive(true); //Visuall stuff
+                    Hookshottransform.localScale = Vector3.zero; //visuall stuff
+                    hookshotsize = 0f; //visual
+                    Stats = States.hookshotthrown;//Hier zet het de state van de player naar thrown shot. Het is vergelijk baar met een bool
                 }
             }
 
@@ -482,7 +477,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
         CharacterController.Move(hookshotdir * Hookspeed * hookshotMultiplier * Time.deltaTime);
         float reachedhookshotposdis = 1f;
-            rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 2.5f * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 1.2f *  Time.deltaTime, ForceMode.Impulse);
         if(Vector3.Distance(transform.position, hookshotPos) < reachedhookshotposdis)
         {
             Hookshottransform.gameObject.SetActive(false);

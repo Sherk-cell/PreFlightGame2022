@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recentFilesPaths:
-  - Assets/Animations voor testdingen/Lazerbelow.anim
-  - Assets/Animations voor testdingen/Lazer 1.controller
-  - Assets/Animations voor testdingen/Lazer.controller
-  - Assets/Animations voor testdingen/Lazer.anim
-  - Assets/Scripts/Movement/PlayerCam.cs
+  - Assets/Scripts/Enemy.cs
+  - Assets/Scenes/Level1.unity
+  - Assets/Scripts/EnemyAI.cs
+  - Assets/Scripts/Olderscripts/GrenadeThrow.cs
+  - Assets/PlayerHealth.cs
   - Assets/Scripts/Movement/Airdash.cs
-  - Assets/Scenes/Betere map.unity
-  - Assets/Scenes/Pauzescreen.unity
-  - Assets/Scenes/Map.unity
-  - Assets/Scenes/Test.unity
+  - Assets/Scripts/Damagescripts/Lazer.cs
+  - Assets/Scenes/Introscherm.unity
+  - Assets/Scenes/TutorialLevel.unity
+  - Assets/Scripts/Tutorial scripts/Tutorial.cs
