@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recentFilesPaths:
-  - Assets/Scripts/Enemy.cs
-  - Assets/Scenes/Level1.unity
   - Assets/Scripts/EnemyAI.cs
   - Assets/Scripts/Olderscripts/GrenadeThrow.cs
   - Assets/PlayerHealth.cs
@@ -23,3 +21,5 @@ MonoBehaviour:
   - Assets/Scenes/Introscherm.unity
   - Assets/Scenes/TutorialLevel.unity
   - Assets/Scripts/Tutorial scripts/Tutorial.cs
+  - Assets/Scenes/TutorialLevel2.unity
+  - Assets/Scripts/Tutorial scripts/Tutorial2.cs
