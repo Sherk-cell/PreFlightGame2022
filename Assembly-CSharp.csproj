@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0DCC42BC-0728-D451-347A-0FC0516843C9}</ProjectGuid>
+    <ProjectGuid>{29BFA820-4A7C-EE10-EC15-1055784F25D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,28 +57,23 @@
     <Compile Include="Assets\Scripts\Movement\Airdash.cs" />
     <Compile Include="Assets\Scripts\Movement\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerCam.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Olderscripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Olderscripts\Sliding.cs" />
     <Compile Include="Assets\Scripts\Damagescripts\Lazer.cs" />
-    <Compile Include="Assets\Scripts\Olderscripts\GrenadeThrow.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\PauzeGame.cs" />
-    <Compile Include="Assets\Scripts\Olderscripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Tutorial scripts\Tutorial2.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\ButtonFunction.cs" />
-    <Compile Include="Assets\Scripts\Olderscripts\throwing.cs" />
+    <Compile Include="Assets\Scripts\Movement\PlayerMovementAdvanced.cs" />
     <Compile Include="Assets\Scripts\Movement\IsusingCharControl.cs" />
     <Compile Include="Assets\Scripts\Olderscripts\Swinging.cs" />
     <Compile Include="Assets\Scripts\Movement\WallRunningAdvanced.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\ObjGrab.cs" />
     <Compile Include="Assets\Scripts\Tutorial scripts\Tutorial.cs" />
     <Compile Include="Assets\Scripts\Olderscripts\FirstPerson.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\Movement\PlayerMovementAdvanced.cs" />
     <Compile Include="Assets\Scripts\Olderscripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\Introscreen.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Movement\Turret.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -308,6 +303,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -672,9 +673,6 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
@@ -686,12 +684,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -717,9 +709,6 @@
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
@@ -738,7 +727,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{9780FD69-50FB-8297-07DC-A414B1C4F663}</Project>
+      <Project>{B5D3735A-668D-12CC-A5D7-8B1B09CFD601}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

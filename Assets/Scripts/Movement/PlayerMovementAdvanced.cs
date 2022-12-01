@@ -98,7 +98,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public bool crouching;
     public bool wallrunning;
 
-  
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -115,7 +115,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     private void Update()
     {
 
-        
+
 
         switch (Stats)
         {
@@ -157,12 +157,12 @@ public class PlayerMovementAdvanced : MonoBehaviour
             rb.drag = 0;
 
 
-        if(IsusingCharController == true)
+        if (IsusingCharController == true)
         {
             CharacterController.enabled = true;
         }
 
-        if(IsusingCharController == false)
+        if (IsusingCharController == false)
         {
             CharacterController.enabled = false;
         }
@@ -402,7 +402,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-       
+
     }
 
     public static float Round(float value, int digits)
@@ -419,7 +419,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
             RaycastHit raycastHit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out raycastHit, shotrng)) //Hier geef ik aan dat hij alles moet pakken wat voor de camera is en binnen de range
             {
-                           
+
 
                 if (raycastHit.transform.gameObject.tag == "GrappableObject") //Hier kijkt het als het de tag Grappable heeft
                 {
@@ -452,7 +452,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
         hookshotsize += hookshotthrowspeed * Time.deltaTime;
         Hookshottransform.localScale = new Vector3(1, 1, hookshotsize);
 
-        if(hookshotsize >= Vector3.Distance(transform.position, hookshotPos))
+        if (hookshotsize >= Vector3.Distance(transform.position, hookshotPos))
         {
             Stats = States.HookshotFlyingPlayer;
 
@@ -477,8 +477,8 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
         CharacterController.Move(hookshotdir * Hookspeed * hookshotMultiplier * Time.deltaTime);
         float reachedhookshotposdis = 1f;
-        rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 1.2f *  Time.deltaTime, ForceMode.Impulse);
-        if(Vector3.Distance(transform.position, hookshotPos) < reachedhookshotposdis)
+        rb.AddForce(hookshotdir * Hookspeed * hookshotMultiplier * 1.2f * Time.deltaTime, ForceMode.Impulse);
+        if (Vector3.Distance(transform.position, hookshotPos) < reachedhookshotposdis)
         {
             Hookshottransform.gameObject.SetActive(false);
             Stats = States.Normal;

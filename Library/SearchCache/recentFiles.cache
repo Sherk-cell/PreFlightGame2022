@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recentFilesPaths:
-  - Assets/Scripts/EnemyAI.cs
-  - Assets/Scripts/Olderscripts/GrenadeThrow.cs
-  - Assets/PlayerHealth.cs
-  - Assets/Scripts/Movement/Airdash.cs
-  - Assets/Scripts/Damagescripts/Lazer.cs
+  - Assets/Scenes/Betere map.unity
   - Assets/Scenes/Introscherm.unity
-  - Assets/Scenes/TutorialLevel.unity
-  - Assets/Scripts/Tutorial scripts/Tutorial.cs
-  - Assets/Scenes/TutorialLevel2.unity
-  - Assets/Scripts/Tutorial scripts/Tutorial2.cs
+  - Assets/Scenes/Level1.unity
+  - Assets/Scripts/Movement/WallRunningAdvanced.cs
+  - Assets/Scripts/Movement/Airdash.cs
+  - Assets/Scripts/Movement/IsusingCharControl.cs
+  - Assets/Scripts/Olderscripts/Sliding.cs
+  - Assets/Scripts/Movement/PlayerMovementAdvanced1.cs
+  - Assets/Scripts/Movement/Turret.cs
+  - Assets/Grenade.prefab
