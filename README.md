@@ -29,9 +29,6 @@ Ziplining:
 
 
 
-Wall Running:
-[INCLUDE MERMAID MARKDOWN HERE]
-
 
 
 
